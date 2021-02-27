@@ -3,7 +3,7 @@ Ph.D. Candidate in Computer Science with five years of experience as a Software 
 
 >
 > 1. [Résumé](https://github.com/danaderp/danaderp/blob/main/docs/resume.pdf) 
-> 2. xx
+> 2. [Publication](https://danaderp.github.io/danaderp/docs/publications)
 > 3. cc
 > 
 
