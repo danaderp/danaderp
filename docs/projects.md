@@ -1,7 +1,5 @@
 # Projects
 
-## Traceability Link Recovery
-
 ## 2020
 ### Data Analysis for the Systematic Literature Review of DL4SE
 [[DL4SE]](https://github.com/WM-SEMERU/dl4se) Data Analysis is the process that supports decision-making and informs arguments in empirical studies. Descriptive statistics, Exploratory Data Analysis (EDA), and Confirmatory Data Analysis (CDA) are the approaches that compose Data Analysis (Xia & Gong; 2014). An Exploratory Data Analysis (EDA) comprises a set of statistical and data mining procedures to describe data. We ran EDA to provide statistical facts and inform conclusions. The mined facts allow attaining arguments that would influence the Systematic Literature Review of DL4SE.
