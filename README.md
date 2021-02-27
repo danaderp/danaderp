@@ -4,10 +4,10 @@ Ph.D. Candidate in Computer Science with five years of experience as a Software 
 >
 > 1. [Résumé](https://github.com/danaderp/danaderp/blob/main/docs/resume.pdf) 
 > 2. [Publication](https://danaderp.github.io/danaderp/docs/publications)
-> 3. cc
+> 3. [Projects](https://danaderp.github.io/danaderp/docs/projects)
 > 
 
-## research interest
+## Research interest
 source code generation with deep learning (DL), natural language processing (NLP) in software automation, deep learning for software engineering interpretability, applied causal inference
 
 ## about
