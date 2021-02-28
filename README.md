@@ -12,5 +12,7 @@ source code generation with deep learning (DL), natural language processing (NLP
 
 ## about
 [**ResearchGate**](https://www.researchgate.net/profile/David-Nader)
-[![gmail](https://github.com/danaderp/danaderp/blob/main/images/gmail.png)](danaderp@gmail.com)
-[![in](https://github.com/danaderp/danaderp/blob/main/images/in.png)](https://www.linkedin.com/public-profile/settings?trk=d_flagship3_profile_self_view_public_profile)
+
+[Gmail](danaderp@gmail.com)
+
+[LinkedIn](https://www.linkedin.com/public-profile/settings?trk=d_flagship3_profile_self_view_public_profile)
