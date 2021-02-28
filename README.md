@@ -11,4 +11,4 @@ Ph.D. Candidate in Computer Science with five years of experience as a Software 
 source code generation with deep learning (DL), natural language processing (NLP) in software automation, deep learning for software engineering interpretability, applied causal inference
 
 ## about
-[**ResearchGate**](https://www.researchgate.net/profile/David-Nader) | [Gmail](danaderp@gmail.com) | [LinkedIn](https://www.linkedin.com/public-profile/settings?trk=d_flagship3_profile_self_view_public_profile)
+[**ResearchGate**](https://www.researchgate.net/profile/David-Nader) | [Gmail:danaderp@gmail.com] | [LinkedIn](https://www.linkedin.com/public-profile/settings?trk=d_flagship3_profile_self_view_public_profile)
