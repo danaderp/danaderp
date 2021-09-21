@@ -2,11 +2,11 @@
 # Site settings
 # -----------------------------------------------------------------------------
 
-title: blank # the website title (if blank, full name will be used instead)
-first_name: You
-middle_name: R.
-last_name: Name
-email: you@example.com
+title: computolco # the website title (if blank, full name will be used instead)
+first_name: David
+middle_name: A.
+last_name: Nader
+email: danaderpalacio@email.wm.edu
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
   A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
 footer_text: >
@@ -51,8 +51,8 @@ og_image: # The site-wide (default for all links) Open Graph preview image
 
 github_username: danaderp # your GitHub user name
 gitlab_username: # your GitLab user name
-twitter_username: # your Twitter handle
-linkedin_username: # your LinkedIn user name
+twitter_username: danaderp# your Twitter handle
+linkedin_username: danaderp# your LinkedIn user name
 scholar_userid: # your Google Scholar ID
 orcid_id: # your ORCID ID
 medium_username: # your Medium username
