@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-description: <a href="#">Affiliations</a>. Address.
+description: <a href="https://www.linkedin.com/in/david-n-palacio-91b67423/">Affiliations</a>. Address.
 
 profile:
   align: left
