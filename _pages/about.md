@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-description: <a href="https://www.linkedin.com/in/david-n-palacio-91b67423/"> David</a> A. Nader.
+description: <a href="https://twitter.com/computoloco"> @computoloco </a>
 
 profile:
   align: right
