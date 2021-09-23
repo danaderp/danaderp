@@ -2,7 +2,7 @@
 # Site settings
 # -----------------------------------------------------------------------------
 
-title: # the website title (if blank, full name will be used instead)
+title: David N. Palacio # the website title (if blank, full name will be used instead)
 first_name: David
 middle_name: A.
 last_name: Nader
@@ -33,7 +33,7 @@ navbar_fixed: true
 footer_fixed: true
 
 # Dimensions
-max_width: 820px
+max_width: 850px #800px
 
 # TODO: add layout settings (single page vs. multi-page)
 
@@ -50,7 +50,7 @@ og_image: # The site-wide (default for all links) Open Graph preview image
 
 github_username: danaderp # your GitHub user name
 gitlab_username: # your GitLab user name
-twitter_username: danaderp# your Twitter handle
+twitter_username: computoloco# your Twitter handle
 linkedin_username: danaderp# your LinkedIn user name
 scholar_userid: # your Google Scholar ID
 orcid_id: # your ORCID ID
@@ -108,7 +108,7 @@ news_limit: 5
 
 # Markdown and syntax highlight
 markdown: kramdown
-highlighter: green #rouge
+highlighter: rouge
 highlight_theme: github  # https://github.com/jwarby/jekyll-pygments-themes
 kramdown:
   input: GFM
