@@ -2,7 +2,7 @@
 # Site settings
 # -----------------------------------------------------------------------------
 
-title: computoloco # the website title (if blank, full name will be used instead)
+title: # the website title (if blank, full name will be used instead)
 first_name: David
 middle_name: A.
 last_name: Nader
@@ -33,7 +33,7 @@ navbar_fixed: true
 footer_fixed: true
 
 # Dimensions
-max_width: 800px
+max_width: 820px
 
 # TODO: add layout settings (single page vs. multi-page)
 
@@ -83,7 +83,7 @@ pagination:
   enabled: true
 
 # Comments
-disqus_shortname: al-folio # put your disqus shortname
+disqus_shortname: computoloco # put your disqus shortname
 # https://help.disqus.com/en/articles/1717111-what-s-a-shortname
 
 # -----------------------------------------------------------------------------
@@ -108,7 +108,7 @@ news_limit: 5
 
 # Markdown and syntax highlight
 markdown: kramdown
-highlighter: rouge
+highlighter: green #rouge
 highlight_theme: github  # https://github.com/jwarby/jekyll-pygments-themes
 kramdown:
   input: GFM
