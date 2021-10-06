@@ -19,4 +19,6 @@ Ph.D. Candidate in Computer Science at The College of William & Mary, [SEMERU Re
 
 My fields of interest lie in complexity science, neuroevolution, causal reinforcement learning, and interpretable machine learning for the study and automation of software engineer processes. 
 
+On a personal level, I was born in Bogota (Colombia). My first language is Spanish. However, I learnt English and German for professional purpuses. My hobbies include biking, kayaking, hiking, and (rarely) video games. I also enjoy reading sci-fi literature. My favorite author is Isaac Asimov. Because of my colombian heritage, I am fond of coffee in all its preparation ways.  
+
 `code: ML`
