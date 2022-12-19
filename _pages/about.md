@@ -7,6 +7,7 @@ description: <a href="https://twitter.com/computoloco"> @computoloco </a>
 profile:
   align: right
   image: prof_pic.jpg
+  image_circular: false # crops the image to make it circular
   address: >
     <p>PhD Student in Computer Science</p>
 
