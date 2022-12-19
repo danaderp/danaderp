@@ -75,7 +75,7 @@ panelbear_analytics: XXXXXXXXX # panelbear analytics site ID
 # -----------------------------------------------------------------------------
 
 blog_name: computoloco  # your blog must have a name for it to show up in the nav bar
-blog_description: the Artificial Software Engineering blog 
+blog_description: the _Causal Software Engineering_ blog 
 permalink: /blog/:year/:title/
 
 # Pagination
