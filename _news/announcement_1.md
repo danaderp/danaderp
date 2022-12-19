@@ -1,7 +1,7 @@
 ---
 layout: post
-date: 2021-09-23
+date: 2015-10-22 15:59:00-0400
 inline: true
 ---
 
-First Version of my web-page :sparkles: :smile:
+A simple inline announcement.
