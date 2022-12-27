@@ -11,7 +11,7 @@
   contents:
     - title: Ph.D. Candidate in Computer Science
       institution: Collegue of William & Mary, Williamsburg, VA
-      year: 2023
+      year: 2017-2023
       description:
         - Research Assistant in Deep Learning for Software Engineering.
         - Teacher Assistant for Neural Networks & Deep Learning, Software Engineering, Software Development, Reasoning Under Uncertainty.
@@ -46,8 +46,8 @@
 - title: Experience
   type: time_table
   contents:
-    - title: Professor of Theoretical Physics
-      institution: Institute for Advanced Study, Princeton University
+    - title: Research Intern (Applied Scientist)
+      institution: Microsoft Corporation
       year: 1933 - 1955
       description:
         - Description 1.
