@@ -2,25 +2,24 @@
   type: map
   contents:
     - name: Full Name
-      value: Albert Einstein
-    - name: Date of Birth
-      value: 14th March 1879
+      value: David N. Palacio
     - name: Languages
-      value: English, German
+      value: English, Spanish, German
 
 - title: Education
   type: time_table
   contents:
     - title: PhD
-      institution: University of Zurich, Zurich, Switzerland
-      year: 1905
+      institution: Collegue of William & Mary, Williamsburg, VA
+      year: 2023
       description:
-        - Description 1.
-        - Description 2.
-        - title: Description 3.
+        - Research Assistant in Deep Learning for Software Engineering.
+        - Teacher Assistant for Neural Networks & Deep Learning, Software Engineering, Software Development, Reasoning Under Uncertainty.
+        - title: Courses.
           contents:
-            - Sub-description 1.
-            - Sub-description 2.
+            - Data Analysis and Simulation.
+            - Advance Software Engineering.
+            - Cybersecurity.
     - title: Federal teaching diploma
       institution: Eidgenössische Technische Hochschule, Zurich, Switzerland
       year: 1900
