@@ -1,10 +1,10 @@
 github_users:
-  - torvalds
-  - alshedivat
+  - danaderp
+  - ArtificialSoftwareEngineering
 
 github_repos:
-  - alshedivat/al-folio
-  - twbs/bootstrap
+  - ArtificialSoftwareEngineering/arem
+  - ArtificialSoftwareEngineering/InterpretingCodeGeneration
   - jekyll/jekyll
   - jquery/jquery
   - FortAwesome/Font-Awesome
