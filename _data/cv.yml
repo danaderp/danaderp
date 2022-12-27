@@ -9,7 +9,7 @@
 - title: Education
   type: time_table
   contents:
-    - title: PhD
+    - title: Ph.D. Candidate in Computer Science
       institution: Collegue of William & Mary, Williamsburg, VA
       year: 2023
       description:
@@ -20,12 +20,28 @@
             - Data Analysis and Simulation.
             - Advance Software Engineering.
             - Cybersecurity.
-    - title: Federal teaching diploma
-      institution: Eidgenössische Technische Hochschule, Zurich, Switzerland
-      year: 1900
+    - title: M.Sc. Computer Engineering 
+      institution: National University of Colombia, Bogota, Colombia
+      year: 2017
       description:
-        - Description 1.
-        - Description 2.
+        - (2015) Assistantship. Head TA for Computer Programming Courses at UNAL.
+        - (2014) Indian Government Scholarship ITEC for Specialized Training on Desing and Implementation of E‑Learning Courses at C‑DAC, India.
+        - (2012‑2013) Exchange program for students from the top 1% at TUM, Germany.
+        - title: Courses.
+          contents:
+            - Artificial Intelligence.
+            - Machine Learning.
+            - Data Mining.
+    - title: B.Sc. Computer Engineering  
+      institution: National University of Colombia, Bogota, Colombia
+      year: 2012
+      description:
+        - Passed with Distinction.
+        - Specialized in Software Construction, Artificial Intelligence, and Genetic Algorithms.
+        - title: Courses.
+          contents:
+            - Software Engineering.
+            - Evolutionary Computation.
 
 - title: Experience
   type: time_table
