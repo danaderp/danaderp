@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Information Science for Software Traceability & Retrieval
-description: Deep Learning for Software Engineering
+title: Information Science 
+description: For Software Traceability & Retrieval
 img: /assets/img/12.jpg
 importance: 1
 category: interpretability
