@@ -76,6 +76,40 @@ The similarity metrics have a non-standard behaviour. For instance, let’s comp
 
 > __Summary__: the maximum transmissions of information was around 4.4 bits from issues to source code. If we observe the link {PR-294 ➝ psb_mapping.py}, which corresponds to the minimum MI of 5.5 B in the 99% quantile,  then we infer that the 4.4 B of maximum transmission can be improved until reaching an average value of 5.5B. We recommend that software developers implement inspection procedures to refactor documentation in both requirements and source code to enhance mutual information (and MSI).
 
+### EDA2: Manifold of Information measures by Ground Truth 
+Unfortunately, information measures are not being affected by the nature of the traceability. That is, information is independent of whether a link between two artifacts exists or not. Nonetheless all sequence-based artifacts are related somehow (or share some amount of information), this “independent” behaviour is not expected in similarity metrics such as softcosine, euclidean, or word mover’s distance. Neural unsupervised techniques based on skip gram models are unable to binary classify a link. In other words, data do not have encoded the necessary patterns to determine the classification. We need to employ probabilistic models to intervene in the expectation value of a link (see COMET approach) or systematic refactorings on the artifacts.
+
+- Self-Information of source artifacts _I(X)_. 
+    - Linked [3.80 ± 1.16] B | Median: 4.12 B
+    - Non-Linked [3.41 ± 1.31] B | Median: 3.64 B
+    - _Interpretation_: Confirmed links and non links intervals are overlapping in a large entropy range for the source set. The distance between the medians is around 0.48B. We cannot see any entropy difference between linked and non-linked source artifacts. 
+- Self-Information of target artifacts _I(Y)_. 
+    - Linked [6.23 ± 0.89] B | Median: 6.21 B
+    - Non-Linked [5.90 ± 0.86] B | Median: 5.90 B
+    - _Interpretation_: Confirmed links and non links intervals are overlapping in a large entropy range for the target set. The distance between the medians is around 0.31B. We cannot see any entropy difference between linked and non-linked source artifacts.
+- Mutual Information _I(X:Y)_.  
+    - Linked [3.60 ± 1.06] B | Median: 3.85 B
+    - Non-Linked [3.20 ± 1.19] B | Median: 3.39 B
+    - _Interpretation_: Confirmed links and non links intervals are overlapping in a large mutual information range for both sets. The distance between the medians is around 0.46B. Mutual information does not work as a predictor of links with the given ground truth. We expect high mutual information in confirmed links and low mutual information in non-links. 
+- Information Loss _I(X\|Y)_. 
+    - Linked [2.63 ± 1.33] B | Median: 2.46 B
+    - Non-Linked [2.71 ± 1.35] B | Median: 2.53 B
+    - _Interpretation_: Confirmed links and non links intervals are overlapping in a large entropy loss range for both sets. The distance between the medians is around 0.07B. The loss is basically the same for links and non links. We expect high loss in non-links. 
+- Information Noise I(Y\|X). 
+    - Linked [0.20 ± 0.31] B | Median: 0.09 B
+    - Non-Linked [0.21 ± 0.30] B | Median: 0.11 B
+    - _Interpretation_: Confirmed links and non links intervals are overlapping in a large entropy noise range for both sets. The distance between the medians is around 0.02B. The noise is basically the same for links and non links. We expect high noise in non-links.  
+- Minimum Shared of Information for Entropy.
+    - Linked [1.98 ± 1.11] B | Median: 2.00 B
+    - Non-Linked [1.44 ± 1.14] B | Median: 1.50 B
+    - _Interpretation_: The distance between the medians is around 0.5B. We expect high shared information in confirmed links and low shared information in non-links for the entropy.
+- Minimum Shared of Information for Extropy.
+    - Linked [1.07 ± 0.43] B | Median: 1.25 B
+    - Non-Linked [0.86 ± 0.54] B | Median: 1.12 B
+    - _Interpretation_: The distance between the medians is around 0.13B. We expect low shared information in confirmed links and high shared information in non-links for the extropy.
+
+> __Summary__: Despite the fact that the amount of information in the source code is larger than the amount of information in the set of issues; the MI, loss, and noise are indistinguishable from confirmed links to non-links. We expect low amounts of mutual information and high amounts of loss and noise for non-related artifacts. 
+
 
 
     ---
