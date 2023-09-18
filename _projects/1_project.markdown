@@ -30,6 +30,14 @@ The approach we have used in this study aims to calculate a set of information m
     - _I(X=PR-128):_ 0.0 B
     - _Interpretation:_ Generally, having a pull request with few (and repetitive) tokens (words) impacts negatively the self-information value.  This metric is useful to measure the content of information in the source. If we track the information content, we can explain why a traceability occurs. 
 
+2. __Self-Information of target artifacts__ _I(Y)_. This is the entropy of a set of target artifacts or source code. Intuitively, self-information of a target artifact is the same formula as the entropy for a source artifact. The only difference is that the target artifacts are often source code. The following example shows the entropy for the XXX source code file with path xxx-python-common/xxx_python_common/fireException.py’:
+    - _Source Content:_ “import sys\r\nimport traceback\r\n\r\n\r\ndef fireException(message):\r\n    try:\r\n        with open("buddy_script_error.txt", "w") as file:\r\n            file.write(str(message))\r\n        print(message)\r\n        traceback.print_exc()\r\n        sys.exit(-1)\r\n    except IOError:\r\n        traceback.print_exc()\r\n        sys.exit(-1)\r\n”
+    - _I(Y=fireExcpetion.py):_ 4.16 B
+    - _Interpretation:_ The amount of information that is encompassed in the fireException.py file required 4.16 B. Notice that the source content is more diverse than PR-128. This metric is useful when you compare it with the self-information of a source artifact. It helps us to measure imbalance information in a given trace link. 
+
+3. __Mutual Information__ _I(X:Y)_. This is the amount of information that X can see of Y and the amount of information that Y can see of X. That is, MI quantifies the information that two artifacts hold in common or the amount of information transmitted from a source to a target. For example, the trace link {PR-256 ➝ binary_scan_func.py} has a MI of 6.38B, which corresponds to the maximum entropy found in the dataset. This value suggests that the content in source artifacts overlaps a large portion of the content in the target artifact. However, the potential link {PR-56 ➝ binary_scan_func.py} has the same MI as the previous link but it is not a “real” link according to the ground truth. If we observe the case study 0 (see last section), we notice that both PR-56 and PR-256 have the maximum self-information observed in XXX as well as the artifact binary_scan_func.py. The mutual information analysis is telling us that the potential link  {PR-56 ➝ binary_scan_func.py} could be an information link not considered by the ground truth. 
+
+
     ---
     layout: page
     title: project
