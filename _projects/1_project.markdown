@@ -25,7 +25,10 @@ Theoretically, software requirements should be amenable to being _translated_ in
 
 The approach we have used in this study aims to calculate a set of information measures to complement and explain the limitations of semantic traceability techniques. Understanding such limitations (or bounds) will allow us to assess how well traceability algorithms work for a given software project. Numerous experiments have established that studying the manifold of information measures might help us to detect critical points on the artifacts. These critical points are potential missed documentation or repetitive tokens that need to be refactored to enhance the effectiveness of traceability algorithms. The following list poses a set of information measures and exemplifies their usefulness in software traceability:
 
-
+1. __Self-Information of source artifacts__ _I(X)_. This is the entropy of a set of source artifacts or requirements. Entropy in information theory is the amount of information encoded in a given artifact. The information is measured in terms of bits (B). The following example shows the entropy of the XXX pull request with id 128:
+    - _Pull Request Content:_ “B dtimeout”
+    - _I(X=PR-128):_ 0.0 B
+    - _Interpretation:_ Generally, having a pull request with few (and repetitive) tokens (words) impacts negatively the self-information value.  This metric is useful to measure the content of information in the source. If we track the information content, we can explain why a traceability occurs. 
 
     ---
     layout: page
