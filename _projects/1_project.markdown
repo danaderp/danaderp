@@ -110,7 +110,25 @@ Unfortunately, information measures are not being affected by the nature of the 
 
 > __Summary__: Despite the fact that the amount of information in the source code is larger than the amount of information in the set of issues; the MI, loss, and noise are indistinguishable from confirmed links to non-links. We expect low amounts of mutual information and high amounts of loss and noise for non-related artifacts. 
 
+### ED3: Scatter Matrix for Information Measures
+Correlations are helpful to explain variables that we are not easily able to describe just by observing their values. Correlations are useful to interpret the causes or detect similar patterns for a given metric. In this case, we want to study similarity variables by correlating them with other similarity variables and information measures (e.g., MI, Loss, Noise, Entropy, etc). The following manifold in Figure 3 depicts all the correlations and distribution of each information variable. We want to highlight that the WMD similarity is mostly positively correlated (~0.74) with other information metrics, while COS similarity has the opposite effect. 
 
+#### Mutual Information & Shared Information Entropy and Extropy
+This analysis consists of computing a correlation between the distance and entropy. Mutual information is positively correlated with WMD similarity as observed in Figure4. This implies that the larger the amount of shared information, the more similar the artifacts. The previous statement makes sense until we observe that MI is not correlated with the cosine similarity. Is the word vector capturing better semantic relationships than paragraph vectors? Apparently, both approaches are not performing well according to the supervised evaluation. 
+
+On the other hand, the MSI for entropy is also positively correlated with the WMD as depicted in Figure 5. The trend is expected after observing the correlation with the mutual information. However, the extropy is also positively correlated. Basically, we are showing more evidence that WMD similarity is capturing better semantic relationships among the artifacts. 
+
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        <img class="img-fluid rounded z-depth-1" src="{{ '/assets/img/proj1/fig4_1.jpg' | relative_url }}" alt="" title="Similarity and Mutual Information"/>
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
+        <img class="img-fluid rounded z-depth-1" src="{{ '/assets/img/proj1/fig4_2.jpg' | relative_url }}" alt="" title="Similarity and Mutual Information"/>
+    </div>
+</div>
+<div class="caption">
+    Figure 4. Similarity and Mutual Information
+</div>
 
     ---
     layout: page
