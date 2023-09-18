@@ -51,7 +51,14 @@ Additionally, we introduce the concept of _Minimum Shared of Information_ for en
 
 The core idea of using Information Measures with Software Traceability is to determine and _quantify the boundaries of the effectiveness of Unsupervised Techniques_. In other words, we want to demonstrate that traceability data is insufficient to derive a trace pattern if the information measures are not in optimal ranges. Hence, information retrieval techniques are limited approaches to produce reliable traceability links. However, we can also determine to what extent is the information lost during the transmission process {Pull Request ➝ Source Code} as well as to what extent is the information noise in target artifacts. The information loss and noise could be relevant for security purposes (i.e., why a given piece of source code is not covered by the requirements?). 
 
+## Empirical Evaluation Setup
 
+The results presented in this section are a product of the optimal configuration of IR techniques for software traceability reached with baseline datasets (LibEst, iTrust, eTour, EBT, and SMOS). This configuration is defined as follows: conventional preprocessing, which includes stemming, camel case splitting, and stop words removal. The traceability arrow is from “issues'' to “source code” (issue2src). The vectorization technique employed is skip gram (word2vec) and paragraph vector bag of words (pv-bow) (doc2vec). The pretraining was performed with the java and python code search net dataset. The embedding size was 500 and the number of epochs were 20 for each model.
+
+The data science information pipeline is composed of 2 analyses and 1 chapter for case studies. The 2 analyses are:
+
+- _Exploratory Data Analysis for Interpreting Traceability_. The goal of this section is to measure the set of information measures and summarize the results in probability distributions. The data is also analyzed according to the ground truth and variable correlations. This exploration allows us to interpret how well an unsupervised technique for traceability will perform.  
+- _Supervised Evaluation_. The goal of this section is to show the effectiveness of the unsupervised techniques and their limitations due to information measures.  
 
     ---
     layout: page
