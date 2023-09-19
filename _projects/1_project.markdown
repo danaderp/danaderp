@@ -226,21 +226,35 @@ In this study, we are just observing the loss 99% quantile for positive links.
     - Source Code ID (self-entropy 2.52🠗 B): sacp-python-common/sacp_python_common/template/\__init__.py
     - Source Code Content: “import os\r\n\r\nTEMPLATE = os.path.dirname(os.path.realpath(\__file__))\r\n”
     - Loss: 2.76🠕 B
-    - _Discussion_. Edge cases of loss are useful to detect starting points for a general refactoring in the target documentation. The max case shows us the pull request content is composed just by one word. The tokens that represent this word were not found in the target security_results_push_func.py, which is one of the highest entropy files. Whereas, the min case shows us the pull request has a complete description that was not found in the target.  Now, let’s pay attention to the 99% quartile for positive links. The PR-Content cannot be easily found in the source code with low entropy. Even if a software engineer tries to do a manual extraction of links. The relationship is not evident. 
+
+_Discussion_. Edge cases of loss are useful to detect starting points for a general refactoring in the target documentation. The max case shows us the pull request content is composed just by one word. The tokens that represent this word were not found in the target security_results_push_func.py, which is one of the highest entropy files. Whereas, the min case shows us the pull request has a complete description that was not found in the target.  Now, let’s pay attention to the 99% quartile for positive links. The PR-Content cannot be easily found in the source code with low entropy. Even if a software engineer tries to do a manual extraction of links. The relationship is not evident. 
 
 
 ## Case Study 2: MaxMin Noise
 - Case Study 2.1: Max Case
     - Pull Request ID (self-entropy 6.56🠕): 256
     - PR Content: see above
-    - Source Code ID (self-entropy 2.52🠗): “sacp-python-common/sacp_python_common/template/\__init__.py”
+    - Source Code ID (self-entropy 2.52🠗): “xxx-python-common/sacp_python_common/template/\__init__.py”
     - Noise: 4.12 B
     - Trace Link: non-link
 
 
-You can also put regular text between your rows of images.
-Say you wanted to write a little bit about your project before you posted the rest of the images.
-You describe how you toiled, sweated, *bled* for your project, and then... you reveal it's glory in the next row of images.
+- Case Study 2.2: Min Case
+    - Pull Request ID (self-entropy 3.38): 213
+    - PR Content: “'Third Party refactor (#211) * folder  * first stage changes  * first stage changes  * first stage changes  * unittest  * unittest  * unittest  * unittest  * unittest  * unittest  * unittest  * unittest  * stage two changes  * stage two changes  * stage two changes  * stage two changes  * stage two changes  * stage two changes  * stage two changes  * stage two changes  * stage two changes  * stage two changes  * stage two changes  * stage two changes  * stage two changes  * stage two changes  * unittest  * unittest  * unittest  * unittest  * unittest  * unittest  * unittest  * unittest  * unittest  * unittest  * bd fix + unittest  * unittest  * unittest  * unittest  * unittest  * unittest  * unittest  * unittest  * unittest  * unittest  * unittest  * unittest  * unittest  * unittest  * unittest  * unittest  * unittest  * unittest  * unittest  * unittest  * unittest  * unittest  * unittest  * unittest  * unittest  * unittest  * unittest  * unittest  * unittest  * unittest  * unused function  * unittest  * unittest  * unittest  * unittest  * unittest  * unittest  * unittest  * unittest  * unittest  * 3rd party refactor  * bugfix  * bugfix  * bugfix  * bugfix  * bugfix  * bugfix  * bugfix  * bugfix  * bugfix  * bugfix  * bugfix  * bdfix  * bdfix  * bdfix  * conflict  * BD fusion  * bd fusion  * bd fusion  * bd fusion  * bd fusion  * Corona class  * Corona class  * Corona class  * Corona class  * Corona class  * Corona class  * Corona class  * byos tests  * byos tests  * byos tests  * byos tests  * byos tests  * byos tests  * byos tests  * byos tests  * byos tests  * byos tests  * byos tests  * bugfix  * bugfix  * bugfix  * bugfix”
+    - Source Code ID (self-entropy 5.37): “xxx-python-common/setup.py”
+    - Noise: -0.44 B
+    - Trace Links: non-link
+
+- Case Study 2.3: Quantile Noise (>=0.99) for Positive Links
+    - Pull Request ID (self-entropy 0.0🠗): 241
+    - PR-Content: “Reportbugs”
+    - Source Code ID (self-entropy 7.48): xxx-python-common/sacp_python_common/third_party/binary_scan_func.py
+    - Source Code Content: (large file)
+    - Noise: 7.48🠕
+
+
+_Discussion_. Edge cases of noise are useful to detect refactorings in documentation found in the source documentation. Let’s observe the max case, the PR content is really high, but the target artifact is the \_init_ file, which is empty. This suggests that the target is not well documented (but in this case makes sense). Something similar happens with the min case. However, this time the PR content is very repetitive and less expressive. Now, a useful case would be one with positive links in the 99% quantile. Here, we can detect that the PR-241 is poorly documented since the noise is around 7.48B, while the target is one of the highest entropy files.  
 
 
 <div class="row justify-content-sm-center">
@@ -255,19 +269,3 @@ You describe how you toiled, sweated, *bled* for your project, and then... you r
     You can also have artistically styled 2/3 + 1/3 images, like these.
 </div>
 
-
-The code is simple.
-Just wrap your images with `<div class="col-sm">` and place them inside `<div class="row">` (read more about the <a href="https://getbootstrap.com/docs/4.4/layout/grid/" target="_blank">Bootstrap Grid</a> system).
-To make images responsive, add `img-fluid` class to each; for rounded corners and shadows use `rounded` and `z-depth-1` classes.
-Here's the code for the last row of images above:
-
-```html
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        <img class="img-fluid rounded z-depth-1" src="{{ '/assets/img/6.jpg' | relative_url }}" alt="" title="example image"/>
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        <img class="img-fluid rounded z-depth-1" src="{{ '/assets/img/11.jpg' | relative_url }}" alt="" title="example image"/>
-    </div>
-</div>
-```
