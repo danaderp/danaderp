@@ -293,4 +293,15 @@ This case study introduces orphan informative links or potential links with a hi
 
 _Discussion_. Orphan links not only exhibit inconsistencies in the ground truth file but also suggest potential positive links independent of the employed unsupervised technique. The previous examples need to be further analyzed to decide if they are actually a link. Otherwise, we need to find an explanation of why they are sharing such an amount of information.  
 
+## Citation
+
+```latex
+@misc{palacio2023tracexplainer,
+    title={Information Theory for Interpreting Software Traceability},
+    author={David N. Palacio},
+    year={2023},
+    archivePrefix={arXiv},
+    primaryClass={cs.SE}
+}
+```
 
