@@ -154,7 +154,7 @@ The composable manifolds are useful for inspecting a third information variable.
     </div>
 </div>
 <div class="caption">
-    Figure 5. Loss & Noise with Similarity and Mutual Information
+    Figure 6. Loss & Noise with Similarity and Mutual Information
 </div>
 
 
@@ -177,6 +177,16 @@ The supervised evaluation consists of measurements of the accuracy of the link r
 </div>
 
 > __Summary__: The set of confirmed links and non-links are extremely imbalanced. Cosine and Soft-Cosine similarities behave better under AUC analysis, which means they actually identify non-links with a minimum effectiveness of 0.62. However, neural unsupervised techniques failed at identifying actual links since the data is not “naturally” partitioned or grouped (see EDA grouped by ground truth). 
+
+
+## Some Use Cases
+This section shows four information science cases from processing the XXX system. The whole set of experiments and samples can be found in this link. 
+- __Case 0: Self-Information__. This study highlights the imbalance of information between the source and target artifacts.
+- __Case 1: Minimum and maximum loss__. This study presents edge cases for the entropy loss. This is useful to detect poorly documented target artifacts.  
+- __Case 2: Minimum and maximum noise__. This study presents edge cases for the entropy noise. This is useful to detect poorly documented source artifacts.
+- __Case 3: Orphan informative links__. This study points out a set of informative links that are not found in the ground truth. 
+
+Consider the following notation for this section. Down arrows 🠗 represent the minimum entropy value observed. Up arrows 🠕 depict the maximum entropy value observed. Entropy values are given in bit unit (B). Links with value 1.0 are _confirmed-links_, whereas links with value 0.0 are _non-links_. 
 
 
     ---
