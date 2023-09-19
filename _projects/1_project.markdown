@@ -256,16 +256,12 @@ _Discussion_. Edge cases of loss are useful to detect starting points for a gene
 
 _Discussion_. Edge cases of noise are useful to detect refactorings in documentation found in the source documentation. Let’s observe the max case, the PR content is really high, but the target artifact is the \_init_ file, which is empty. This suggests that the target is not well documented (but in this case makes sense). Something similar happens with the min case. However, this time the PR content is very repetitive and less expressive. Now, a useful case would be one with positive links in the 99% quantile. Here, we can detect that the PR-241 is poorly documented since the noise is around 7.48B, while the target is one of the highest entropy files.  
 
+## Case Study 3: Orphan Informative Links 
+This case study introduces orphan informative links or potential links with a high mutual information but with a negative ground truth. For instance, the following 3 links are negative links in the ground truth but they are in the 99% quantile of MI:
+> {PR-56 ➝ spotbugs/spotbugs.py}: 6.31 B 
+> {PR-56 ➝ third_party/binary_scan_func.py}: 6.38 B
+> {PR-256 ➝ spotbugs/spotbugs.py}: 6.31 B
 
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        <img class="img-fluid rounded z-depth-1" src="{{ '/assets/img/6.jpg' | relative_url }}" alt="" title="example image"/>
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        <img class="img-fluid rounded z-depth-1" src="{{ '/assets/img/11.jpg' | relative_url }}" alt="" title="example image"/>
-    </div>
-</div>
-<div class="caption">
-    You can also have artistically styled 2/3 + 1/3 images, like these.
-</div>
+_Discussion_. Orphan links not only exhibit inconsistencies in the ground truth file but also suggest potential positive links independent of the employed unsupervised technique. The previous examples need to be further analyzed to decide if they are actually a link. Otherwise, we need to find an explanation of why they are sharing such an amount of information.  
+
 
