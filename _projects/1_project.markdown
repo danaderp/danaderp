@@ -139,7 +139,7 @@ Correlations are helpful to explain variables that we are not easily able to des
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        <img class="img-fluid rounded z-depth-1" src="{{ '/assets/img/proj1/fig3_1.png' | relative_url }}" alt="centered image" title="example image"/>
+        <img class="img-fluid rounded z-depth-1" align="middle" src="{{ '/assets/img/proj1/fig3_1.png' | relative_url }}" alt="centered image" title="example image"/>
     </div>
 </div>
 <div class="caption">
