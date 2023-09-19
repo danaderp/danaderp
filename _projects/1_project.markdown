@@ -18,7 +18,7 @@ In general, we recommend examining these imbalanced links, or information discre
 __A note about information theory:__ Information can be transmitted by copy __[Tc]__ or transformation __[Ts]__ and measured by Mutual Information. However, some studies have determined that the MI does not distinguish between a scenario where the target artifact is a copy of the source artifact versus another scenario where the target is a systematically transformed version of the source artifact. Since the minimal information unit in software artifacts is a set of tokens, the information within the source artifact X can be transmitted by copy if the same amount of tokens are found in the target artifact Y. While the source information X can be transmitted by transformation if the target artifact suffers a modification in its syntax or semantics. Nonetheless information can be transmitted in both ways in software systems, we are assuming that the function f(X) is a “copy” process that uses the source information and produces an information target Y. The outcomes generated are software artifacts such as source code, test cases, or design diagrams. Addressing the problem of transformation requires further investigation in applied Information Theory for SE. Moreover, this research is contributing to formalize information measures for software text artifacts and bridge the gap between information theory and unsupervised learning for  traceability. 
 
 
-## Introduction
+## 1. Introduction
 In this exploratory blog report, we address the problem of information transmission in software traceability. Traceability is the study of semantic relationships among textual artifacts. These semantic relationships are relevant to facilitate code comprehension, compliance validation, security tracking, and change impact analysis. Usually, information retrieval techniques (e.g., TF-IDF, LSA, or LDA) have been employed to mathematically represent _high level_ (i.e., requirements) and _low level_ (i.e., source code) software artifacts in compressed tensors. These tensors are learned in an _unsupervised setting_ and employed to calculate a distance (e.g., euclidean, cosine, or Word Mover’s) between two artifacts in distinct vector spaces. The distance defines how semantically close two artifacts are between each other.
 
 Unfortunately, information retrieval techniques cannot always guarantee that any _predicted_ trace link is reliable. Because a data-dependent logical gap exists among different software artifacts, traceability is a difficult and error prone task. Information Retrieval and, in general, Machine Learning focus their attention on finding patterns in data. Data is the central aspect of learning theory. If the data are insufficient or poorly treated, then this is going to be reflected in the effectiveness of the learning algorithms. The traceability algorithms rely on patterns that might not exist in the given (or exposed) artifacts. Consequently, bridging the logical gap is unfeasible. There remains a need for an efficient statistical approach that quantifies how reliable trace links are.  
@@ -51,7 +51,7 @@ Additionally, we introduce the concept of _Minimum Shared of Information_ for en
 
 The core idea of using Information Measures with Software Traceability is to determine and _quantify the boundaries of the effectiveness of Unsupervised Techniques_. In other words, we want to demonstrate that traceability data is insufficient to derive a trace pattern if the information measures are not in optimal ranges. Hence, information retrieval techniques are limited approaches to produce reliable traceability links. However, we can also determine to what extent is the information lost during the transmission process {Pull Request ➝ Source Code} as well as to what extent is the information noise in target artifacts. The information loss and noise could be relevant for security purposes (i.e., why a given piece of source code is not covered by the requirements?). 
 
-## Empirical Evaluation Setup
+## 2. Empirical Evaluation Setup
 
 The results presented in this section are a product of the optimal configuration of IR techniques for software traceability reached with baseline datasets (LibEst, iTrust, eTour, EBT, and SMOS). This configuration is defined as follows: conventional preprocessing, which includes stemming, camel case splitting, and stop words removal. The traceability arrow is from “issues'' to “source code” (issue2src). The vectorization technique employed is skip gram (word2vec) and paragraph vector bag of words (pv-bow) (doc2vec). The pretraining was performed with the java and python code search net dataset. The embedding size was 500 and the number of epochs were 20 for each model.
 
@@ -60,14 +60,14 @@ The data science information pipeline is composed of 2 analyses and 1 chapter fo
 - _Exploratory Data Analysis for Interpreting Traceability_. The goal of this section is to measure the set of information measures and summarize the results in probability distributions. The data is also analyzed according to the ground truth and variable correlations. This exploration allows us to interpret how well an unsupervised technique for traceability will perform.  
 - _Supervised Evaluation_. The goal of this section is to show the effectiveness of the unsupervised techniques and their limitations due to information measures.  
 
-## Exploratory Data Analysis for Interpreting Traceability
+## 3. Exploratory Data Analysis for Interpreting Traceability
 
 Exploratory Data Analysis is an exhaustive search of patterns in data with an specific goal in mind. For this report, our goal is to use information measures to describe and interpret  the effectiveness of unsupervised traceability techniques. This section introduces 3 explorations:
 1. __Manifold of Information Measures__. The purpose of this exploration is to determine the probability distribution of each entropy and similarity metric. We have some assumptions about how we expect these distributions to be. For instance, similarity distributions should be bimodal since we want to observe a link and a non-link. If our assumptions do not match the expected distribution, then we can assess the quality of the technique. 
 2. __Manifold of Information Measures by Ground truth__. The purpose of this exploration is to group each entropy and similarity metric by a given ground truth. The division of data by the ground truth allows us to determine the quality of the prediction for similarity metrics. Additionally, it also allows us to describe how good the ground truth is since we are measuring the information transmission between source and target artifacts. 
 3. __Scatter Matrix for Information Measures__. The purpose of this exploration is to find correlations between information theory metrics and unsupervised similarities. These correlations help us to explain the traceability behaviour from information transmission for a given dataset. 
 
-### EDA1: Manifold of Information Measures
+### 3.1 EDA1: Manifold of Information Measures
 The following manifold depicts the distribution of each information variable. We can observe that the self-information of the source artifacts (or issues) is on average [3.42 ± 1.31] B (or bits), while the self-information of the target artifacts (or source code) is on average [5.91 ± 0.86] B. This means that the amount of information of the source code is 1.72 bits larger than the amount of information in the set of issues. Now, the mutual information is on average [3.21 ± 1.19] B, the minimum shared entropy is [1.45 ± 1.14] B, and the minimum shared extropy is [0.87 ± 0.54] B. 
 
 The loss and noise are both gaussian distributions with a median of 2.53B and 0.11B respectively. The loss is larger than the noise by a range of 2.42B. If we consider that the median of the minimum shared entropy is 1.50B, then the amount of lost information is high. This might indicate that the source code is poorly commented. Furthermore, the noise is barely a bit unit, which indicates that the code is not influenced by an external source of information. 
@@ -76,7 +76,7 @@ The similarity metrics have a non-standard behaviour. For instance, let’s comp
 
 > __Summary__: the maximum transmissions of information was around 4.4 bits from issues to source code. If we observe the link {PR-294 ➝ psb_mapping.py}, which corresponds to the minimum MI of 5.5 B in the 99% quantile,  then we infer that the 4.4 B of maximum transmission can be improved until reaching an average value of 5.5B. We recommend that software developers implement inspection procedures to refactor documentation in both requirements and source code to enhance mutual information (and MSI).
 
-### EDA2: Manifold of Information measures by Ground Truth 
+### 3.2 EDA2: Manifold of Information measures by Ground Truth 
 Unfortunately, information measures are not being affected by the nature of the traceability. That is, information is independent of whether a link between two artifacts exists or not. Nonetheless all sequence-based artifacts are related somehow (or share some amount of information), this “independent” behaviour is not expected in similarity metrics such as softcosine, euclidean, or word mover’s distance. Neural unsupervised techniques based on skip gram models are unable to binary classify a link. In other words, data do not have encoded the necessary patterns to determine the classification. We need to employ probabilistic models to intervene in the expectation value of a link (see COMET approach) or systematic refactorings on the artifacts.
 
 - Self-Information of source artifacts _I(X)_. 
@@ -110,10 +110,19 @@ Unfortunately, information measures are not being affected by the nature of the 
 
 > __Summary__: Despite the fact that the amount of information in the source code is larger than the amount of information in the set of issues; the MI, loss, and noise are indistinguishable from confirmed links to non-links. We expect low amounts of mutual information and high amounts of loss and noise for non-related artifacts. 
 
-### ED3: Scatter Matrix for Information Measures
+### 3.3 ED3: Scatter Matrix for Information Measures
 Correlations are helpful to explain variables that we are not easily able to describe just by observing their values. Correlations are useful to interpret the causes or detect similar patterns for a given metric. In this case, we want to study similarity variables by correlating them with other similarity variables and information measures (e.g., MI, Loss, Noise, Entropy, etc). The following manifold in Figure 3 depicts all the correlations and distribution of each information variable. We want to highlight that the WMD similarity is mostly positively correlated (~0.74) with other information metrics, while COS similarity has the opposite effect. 
 
-#### Mutual Information & Shared Information Entropy and Extropy
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        <img class="img-fluid rounded z-depth-1" src="{{ '/assets/img/proj1/fig3_1.png' | relative_url }}" alt="" title="example image"/>
+    </div>
+</div>
+<div class="caption">
+    Figure 3. Correlation Analysis of Similarity and Information Measures.
+</div>
+
+### 3.4 Mutual Information & Shared Information Entropy and Extropy
 This analysis consists of computing a correlation between the distance and entropy. Mutual information is positively correlated with WMD similarity as observed in Figure4. This implies that the larger the amount of shared information, the more similar the artifacts. The previous statement makes sense until we observe that MI is not correlated with the cosine similarity. Is the word vector capturing better semantic relationships than paragraph vectors? Apparently, both approaches are not performing well according to the supervised evaluation. 
 
 <div class="row">
@@ -142,7 +151,7 @@ On the other hand, the MSI for entropy is also positively correlated with the WM
     Figure 5. Similarity and Shared Information
 </div>
 
-#### Composable Manifolds 
+### 3.5 Composable Manifolds 
 The composable manifolds are useful for inspecting a third information variable. In this case, we focused on the loss and noise (see Figure 6). We can observe that the loss is larger when the mutual information and similarity are lower. However, the noise is more dispersed across the mutual information and similarity. We find different clusters of noise in low and larger ranges of MI. These trends indicate that there is some amount of information that was injected in the source code but it is independent from the conceptual similarity of two artifacts.    
 
 <div class="row">
@@ -196,20 +205,7 @@ Consider the following notation for this section. Down arrows 🠗 represent the
     img: /assets/img/12.jpg
     ---
 
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        <img class="img-fluid rounded z-depth-1" src="{{ '/assets/img/1.jpg' | relative_url }}" alt="" title="example image"/>
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        <img class="img-fluid rounded z-depth-1" src="{{ '/assets/img/3.jpg' | relative_url }}" alt="" title="example image"/>
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        <img class="img-fluid rounded z-depth-1" src="{{ '/assets/img/5.jpg' | relative_url }}" alt="" title="example image"/>
-    </div>
-</div>
-<div class="caption">
-    Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
-</div>
+
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
         <img class="img-fluid rounded z-depth-1" src="{{ '/assets/img/5.jpg' | relative_url }}" alt="" title="example image"/>
