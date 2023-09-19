@@ -15,6 +15,18 @@ In a sample of 21,312 potential trace links (i.e., from pull request comments to
 
 In general, we recommend examining these imbalanced links, or information discrepancies, between pull requests and source code in order to design a refactoring strategy oriented toward reducing the loss and augmenting the mutual information among the software documentation. Bear in mind that the level of mutual information is around 3.21 bits with an error of 0.02 for a confidence of 95%. An ideal range of mutual information may vary according to the system. However, managers should avoid lower values in the mutual information range. Our full blog report below contains additional information as well as the technical details of our techniques.
 
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        <img class="img-fluid rounded z-depth-1" src="{{ '/assets/img/proj1/infoscience.png' | relative_url }}" alt="" title="infoscience"/>
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
+        <img class="img-fluid rounded z-depth-1" src="{{ '/assets/img/proj1/infoscience2.png' | relative_url }}" alt="" title="infoscience"/>
+    </div>
+</div>
+<div class="caption">
+    Information Science for Interpretable Models in Software Retrieval.
+</div>
+
 __A note about information theory:__ Information can be transmitted by copy __[Tc]__ or transformation __[Ts]__ and measured by Mutual Information. However, some studies have determined that the MI does not distinguish between a scenario where the target artifact is a copy of the source artifact versus another scenario where the target is a systematically transformed version of the source artifact. Since the minimal information unit in software artifacts is a set of tokens, the information within the source artifact X can be transmitted by copy if the same amount of tokens are found in the target artifact Y. While the source information X can be transmitted by transformation if the target artifact suffers a modification in its syntax or semantics. Nonetheless information can be transmitted in both ways in software systems, we are assuming that the function f(X) is a “copy” process that uses the source information and produces an information target Y. The outcomes generated are software artifacts such as source code, test cases, or design diagrams. Addressing the problem of transformation requires further investigation in applied Information Theory for SE. Moreover, this research is contributing to formalize information measures for software text artifacts and bridge the gap between information theory and unsupervised learning for  traceability. 
 
 
@@ -271,7 +283,9 @@ _Discussion_. Edge cases of noise are useful to detect refactorings in documenta
 ## Case Study 3: Orphan Informative Links 
 This case study introduces orphan informative links or potential links with a high mutual information but with a negative ground truth. For instance, the following 3 links are negative links in the ground truth but they are in the 99% quantile of MI:
 > {PR-56 ➝ spotbugs/spotbugs.py}: 6.31 B 
+>
 > {PR-56 ➝ third_party/binary_scan_func.py}: 6.38 B
+>
 > {PR-256 ➝ spotbugs/spotbugs.py}: 6.31 B
 
 _Discussion_. Orphan links not only exhibit inconsistencies in the ground truth file but also suggest potential positive links independent of the employed unsupervised technique. The previous examples need to be further analyzed to decide if they are actually a link. Otherwise, we need to find an explanation of why they are sharing such an amount of information.  
