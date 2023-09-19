@@ -67,6 +67,18 @@ Exploratory Data Analysis is an exhaustive search of patterns in data with an sp
 2. __Manifold of Information Measures by Ground truth__. The purpose of this exploration is to group each entropy and similarity metric by a given ground truth. The division of data by the ground truth allows us to determine the quality of the prediction for similarity metrics. Additionally, it also allows us to describe how good the ground truth is since we are measuring the information transmission between source and target artifacts. 
 3. __Scatter Matrix for Information Measures__. The purpose of this exploration is to find correlations between information theory metrics and unsupervised similarities. These correlations help us to explain the traceability behaviour from information transmission for a given dataset. 
 
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        <img class="img-fluid rounded z-depth-1" src="{{ '/assets/img/proj1/fig1_1.png' | relative_url }}" alt="" title="distributions"/>
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
+        <img class="img-fluid rounded z-depth-1" src="{{ '/assets/img/proj1/fig2_1.png' | relative_url }}" alt="" title="distributions"/>
+    </div>
+</div>
+<div class="caption">
+    Figure 1 & 2. Probability distributions of Similarities and Information Measures (and grouped by Ground Truth)
+</div>
+
 ### 3.1 EDA1: Manifold of Information Measures
 The following manifold depicts the distribution of each information variable. We can observe that the self-information of the source artifacts (or issues) is on average [3.42 ± 1.31] B (or bits), while the self-information of the target artifacts (or source code) is on average [5.91 ± 0.86] B. This means that the amount of information of the source code is 1.72 bits larger than the amount of information in the set of issues. Now, the mutual information is on average [3.21 ± 1.19] B, the minimum shared entropy is [1.45 ± 1.14] B, and the minimum shared extropy is [0.87 ± 0.54] B. 
 
