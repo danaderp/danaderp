@@ -164,6 +164,20 @@ The composable manifolds are useful for inspecting a third information variable.
 
 The supervised evaluation consists of measurements of the accuracy of the link recovery. The link recovery is computed in terms of precision, recall, and AUC. Nevertheless both techniques are not capturing semantic similarity in an efficient way, the skip gram model has a better efficiency than the paragraph distributed model for the XXX dataset. This is not a problem of the unsupervised learning approach but a limitation of the data. The data are insufficient to capture patterns that contribute to the binary classification or traceability generation. If we observe Figure 2, we can explain this behaviour by stating that both WMD_similarity and COS_sim are not different when grouped by ground truth. What is more, the median information in source artifacts is 1.12B, while the median in target artifacts is 3.65. Such a situation created an imbalance of information not allowing unsupervised techniques to capture features from source artifacts. In fact, the median MSI for confirmed links is 2.0, which is quite low considering that the MSI max value is 5.23.  
 
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        <img class="img-fluid rounded z-depth-1" src="{{ '/assets/img/proj1/fig7_1.png' | relative_url }}" alt="" title="AUC"/>
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
+        <img class="img-fluid rounded z-depth-1" src="{{ '/assets/img/proj1/fig7_2.png' | relative_url }}" alt="" title="AUC"/>
+    </div>
+</div>
+<div class="caption">
+    Figure 7. Precision-Recall & AUC Performance
+</div>
+
+> __Summary__: The set of confirmed links and non-links are extremely imbalanced. Cosine and Soft-Cosine similarities behave better under AUC analysis, which means they actually identify non-links with a minimum effectiveness of 0.62. However, neural unsupervised techniques failed at identifying actual links since the data is not “naturally” partitioned or grouped (see EDA grouped by ground truth). 
+
 
     ---
     layout: page
