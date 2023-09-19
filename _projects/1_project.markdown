@@ -204,22 +204,39 @@ In some cases, low amounts of information in source artifacts might indicate tha
 In some cases, high amounts of information in a source (and target) artifacts might indicate that the inspected pull request (or source file) has a diverse set of tokens that describe or determine the content of the artifact. In other words, high entropy may indicate the relevance of the artifact. For instance, PR with the following IDs have a max entropy of 6.56: PR-256 and PR-56. While these files (>=0.97 quantile) have an entropy greater than 7.45 B: security_results_push_func.py, binary_scan_func.py, and run_ipcentral_automation.py
 - _Discussion_. Artifacts with low levels of entropy struggle to generate traceability links in view of the fact that unsupervised techniques rely on concise descriptions in natural language. By contrast, high levels of entropy struggle with other conditions like loss or noise. Refactoring operations need to be applied on source and target artifacts to combat the imbalance of information. At least, a semantic idea expressed as a clause is required in both artifacts to guarantee a link. When we preprocess the source code, we are basically transforming the code structure into a sequence structure to extract those clauses. In other words, source code is not treated as a structured language but as a regular text file. The amount of information lost by preprocessing source code as text has not been yet computed.    
 
-    ---
-    layout: page
-    title: project
-    description: a project with a background image
-    img: /assets/img/12.jpg
-    ---
+## Case Study 1: MaxMin Loss
+- Case Study 1.1: Max Case
+    - Pull Request ID (self-entropy 0.0🠗 B): 241 
+    - PR Content: “Reportbugs”
+    - Source Code ID (self-entropy 7.50🠕 B): “sacp-python-common/sacp_python_common/security_results_push/security_results_push_func.py”
+    - Loss: 7.5 B
+    - Trace Link: non-link
+
+- Case Study 1.2: Min Case
+    - Pull Request ID (self-entropy 6.56🠕 B): 256 
+    - PR Content: “'Parameterize corona hostname This is intended to be a backwards-compatible addition of the ability to set the Corona hostname using a new `--corona-hostname` flag that is not required and defaults to corona.cisco.com.  The underlying Corona, Bom, Cve, and Triage classes are also updated in a backwards-compatible way to add the ability to set the `corona_hostname` init parameter, also with a default value.  I tried to follow the pattern I saw in use for the `job_name` and `build_tag` parameters, assuming that this snippet is what will automagically set the `self.corona_hostname` attribute: ```     def create_argument_parser(self, **kwargs):         ...         parser.add_argument(             "--corona-hostname", type=str, help="Corona hostname", default="corona.cisco.com"         )         ...      def run(self):         # parse the command line arguments         arguments = self.create_argument_parser(description=__doc__).parse_args()         # populate the argument values into self         for arg in vars(arguments):             setattr(self, arg, vars(arguments)[arg])         ... ```  I think I got everything that needs to change, but this is my first work with the module so I\'d be happy to step through things on a WebEx with someone if you\'d like.  I\'m not going to document this feature as I don\'t want to give too many teams the idea to start pipelining builds to Corona staging, but as I\'ve mentioned we need this so we can integrate the `binaryScan` step into our staging sanity test stage so we can catch any API drift before it hits production.  Next steps will be to update the container\'s [entrypoint](https://wwwin-github.cisco.com/SACP/CSB-CICD-Containers/blob/master/entrypoints/run_3rd_party.sh#L6) so it knows how to call the binaryScan module with the new flag if it\'s provided, then to update the binaryScan Groovy to look for this parameter in the config map and pass to the [docker_run and venv_run closures](https://wwwin-github.cisco.com/SACP/sectools-jenkins-lib/blob/master/vars/binaryScan.groovy#L109-L207”
+    - Source Code ID (self-entropy 4.82 B): “sacp-python-common/sacp_python_common/third_party/cve.py”
+    - Loss: -0.01036
+    - Trace Link: confirmed-link
+
+- Case Study 1.3: Quantile Loss (>=0.99) for Positive Links
+In this study, we are just observing the loss 99% quantile for positive links. 
+    - Pull Request ID (self-entropy 5.09 B): 193
+    - PR-Content: “CIC-698: Git pre-commit hook for linting This PR adds pre-commit hooks for python file linting. It accomplishes this by using black, flake8, and isort.  Also added in this commit is Pipenv for dependency tracking and virtual environment for development.  The changes were ran through the HelloWorld demo build we have, linked [here](https://engci-jenkins-rtp.cisco.com/jenkins/job/team_SACP/job/DemoBuilds/job/Python3.7/).”
+    - Source Code ID (self-entropy 2.52🠗 B): sacp-python-common/sacp_python_common/template/\__init__.py
+    - Source Code Content: “import os\r\n\r\nTEMPLATE = os.path.dirname(os.path.realpath(\__file__))\r\n”
+    - Loss: 2.76🠕 B
+    - _Discussion_. Edge cases of loss are useful to detect starting points for a general refactoring in the target documentation. The max case shows us the pull request content is composed just by one word. The tokens that represent this word were not found in the target security_results_push_func.py, which is one of the highest entropy files. Whereas, the min case shows us the pull request has a complete description that was not found in the target.  Now, let’s pay attention to the 99% quartile for positive links. The PR-Content cannot be easily found in the source code with low entropy. Even if a software engineer tries to do a manual extraction of links. The relationship is not evident. 
 
 
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        <img class="img-fluid rounded z-depth-1" src="{{ '/assets/img/5.jpg' | relative_url }}" alt="" title="example image"/>
-    </div>
-</div>
-<div class="caption">
-    This image can also have a caption. It's like magic.
-</div>
+## Case Study 2: MaxMin Noise
+- Case Study 2.1: Max Case
+    - Pull Request ID (self-entropy 6.56🠕): 256
+    - PR Content: see above
+    - Source Code ID (self-entropy 2.52🠗): “sacp-python-common/sacp_python_common/template/\__init__.py”
+    - Noise: 4.12 B
+    - Trace Link: non-link
+
 
 You can also put regular text between your rows of images.
 Say you wanted to write a little bit about your project before you posted the rest of the images.
