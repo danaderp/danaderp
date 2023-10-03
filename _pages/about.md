@@ -22,4 +22,4 @@ My fields of interest lie in complexity science, neuroevolution, causal reinforc
 
 On a personal level, I was born in Bogota (Colombia). My first language is Spanish. However, I learned English and German for professional purposes. My hobbies include biking, kayaking, hiking, and (rarely) video games. I also enjoy reading sci-fi literature. My favorite author is Isaac Asimov. Because of my Colombian heritage, I am fond of coffee in all its preparation ways.  
 
-`code: ML` `Deep Learning for Software Engineering | Causal Inference | NLP | Explainability`
+`Deep Learning for Software Engineering` | `Causal Inference` | `NLP` | `Explainability`
