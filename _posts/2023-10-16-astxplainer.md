@@ -26,10 +26,10 @@ toc:
     #   - name: Example Child Subsection 1
     #   - name: Example Child Subsection 2
   - name: Introduction
-  - name: Footnotes
-  - name: Code Blocks
-  - name: Layouts
-  - name: Other Typography?
+  - name: Background & Related Work
+  - name: The ASC-Eval Component
+  - name: Results
+  - name: Citation
 
 # Below is an example of injecting additional post-specific styles.
 # If you use this post as a template, delete this _styles block.
@@ -92,6 +92,24 @@ Given this definition, a statistical language model is a probability distributio
 Depending on \textit{how} the sequence is processed, the hidden state $h_i$ can be computed using either \textit{Encoder-Only}, \textit{Encoder-Decoder}, or \textit{Decoder-Only} architectures according to the \textit{transformers'} layers ~\cite{vaswani2017transformers}. One popular bidirectional objective function used widely in representation learning is \textit{masked language} modeling \cite{devlin_bert_2019}. This function aims to predict masked text pieces based on the surrounding context. CodeBERT \cite{feng_codebert_2020}, CuBERT (345M) \cite{kanade_learning_2020} CodeRoBERTa  \cite{lin_span_2022}, and GraphCodeBERT \cite{guo_graphcodebert_2021} are examples of \textit{Encoder-Only} models for code. In programming contexts, these methods provide useful representations of code sequences for downstream tasks such as code classification, clone and defect detection. CodeT5 \cite{wang_codet5_2021} and PLBART \cite{ahmad_unified_2021} are examples of \textit{Encoder-Decoder} models. These models encode an input sequence and, then, this encoded sequence is decoded with a different architecture. Encoder-Decoder models are trained with the goal of reconstructing masked input sequences \cite{lewis_bart_2019}. Additionally, they have been employed for SE tasks such as code summarization, and code generation using masks\cite{wang_codet5_2021}. Finally, \textit{Decoder-Only} models predict the probability of a token given a preceding sequence. CodeGPT \cite{lu_codexglue_2021}, CodeParrot \cite{codeparrot}, GPT-Neo \cite{black_sid_2021_5297715}, GPT-J \cite{gpt-j}, Codex \cite{openai_codex}, GPT-NeoX \cite{GPTNeoX}, and Google's left-to-right decoder-only Transformer language models \cite{vaswani2017transformers,austin2021program} are examples of \textit{Decoder-Only} models for code. 
 
 Although our proposed approach \astxplainer was designed to be compatible with either type of \llms, this paper concentrated on \textit{Decoder-Only} models due to their popularity for code-based generative tasks \cite{xu_systematic_2022}. These models share a common property: \textit{the ability to connect previously processed information to a present task, such as using an initial sequence of tokens to predict new code tokens}. The resulting auto-completed sequence should be coherent with respect to the context of the initial sequence. This property is known as the ability to model \textit{long-range dependencies}~\cite{karpathy2015understand}. 
+
+_Definition 1:_\textbf{Decoder-Only Transformers.} Decoder-Only models update the hidden state $h_i = f(h_{i-1}, w_{<i})$ using past inputs $w_{<i}$ and a previous hidden state $h_{i-1}$. In other words, these models function in a feed-forward manner that predicts future values from historical values directly. \llms trained on source code have the ability to generate tokens or sub-words given a history. Hence, decoder-only models are employed as generative models $\hat{w_i} \backsim P(w_i | w_{<i} ) = \sigma(y)_i = \frac{e^{y_{w_i}}}{\Sigma_j e^{y_j}}$. 
+
+In the previous approximation, the predicted token $w_i$ is \textit{conditioned} by the previous information. The term $y_j$ represents the \textit{non-normalized log-probabilities} for each output token $j$. We extracted and normalized these \textbf{log-probabilities} from the last layer of \llms to estimate the \textbf{Next-token Predictions} (\ntp) in \astxplainer (see Sec.\ref{sec:approach}). This estimation relies on the softmax function. The softmax $\sigma_i$ returns a distribution over predicted output classes, in this case, the classes are each token in the previously introduced vocabulary $V$. It is expected that the predictions contained in $\sigma_i$ are influenced by previous inputs of the sequence $w_{<i}$. 
+
+\textit{Probing} is a supervised analysis to determine which type of parameters (\eg input code snippets, tokenization process, number of hidden layers, and model size) influence the learning process in machine learning models \cite{troshin_probing_2022}. The purpose of probing is to assess whether hidden representations of machine learning models (\ie \llms) encode specific linguistic properties such as syntactic structures of programming languages. For example, Lopez \etal \cite{lopez_ast-probe_2022} trained a linear classifier to show that code syntactic structures are encoded in pre-trained models in the form of Abstract Syntax Trees (ASTs). Lopez \etal's approach demonstrates that the middle layers of pre-trained models contain ASTs' information\cite{lopez_ast-probe_2022}.
+
+Nonetheless, instead of proposing another syntax probe, our approach \astxplainer adapts AST information to evaluate and explain \llms (see Sec.~\ref{sec:approach}). ASTs are defined as a formal representation of syntactical structures built upon linguistic elements of PLs. ASTs are formed according to the production rules defined in Context Free Grammar (CFGs). More precisely, production rules are functions that combine terminal and non-terminal nodes into statements. Terminal nodes are symbols in the source code (\eg tokens in region \circled{3} of ~Fig.\ref{fig:local_evaluation}), while non-terminal nodes encapsulate more than one terminal node to define the structure of a statement (\eg nodes containing children in region \circled{2} of ~Fig. \ref{fig:local_evaluation}). 
+
+When designing our approach \astxplainer (see Sec.\ref{sec:approach}), we leveraged meaningful and interpretable information defined in Context-Free Grammars ($CFGs$). $CFGs$ are a set of rules containing the syntax and structural information of a language \cite{10.5555/1196416}. Ultimately CFGs define instructions that specify how different tokens (\ie Lexemes) are put together to form valid statements in every programming language.
+
+_Definition 2:_\textbf{Context Free Grammars.} $CFG$ $\mathbb{G}$ is expressed as $\mathbb{G} = (\alpha, \lambda, \omega, \beta)$ where $\alpha$ denotes the finite set of non-terminal symbols, $\lambda$ the finite set of terminal symbols, $\omega$ the finite set of production rules and $\beta$ the start symbol. The set of production rules $\omega$ for any type of statement (\eg conditional, assignation, operator) is expressed in terms of the terminal and non-terminal symbols.
+
+## The ASC-Eval Component
+
+## Results
+
+## Citation
 
 ## OLD
 This theme supports rendering beautiful math in inline and display modes using [MathJax 3](https://www.mathjax.org/) engine.
