@@ -11,7 +11,7 @@ authors:
     affiliations:
       name: Semeru, W&M
 
-bibliography: 2018-12-22-distill.bib
+bibliography: 2023-10-16-astxplainer.bib
 
 # Optionally, you can add a table of contents to your post.
 # NOTES:
@@ -25,7 +25,7 @@ toc:
     # subsections:
     #   - name: Example Child Subsection 1
     #   - name: Example Child Subsection 2
-  - name: Citations
+  - name: Introduction
   - name: Footnotes
   - name: Code Blocks
   - name: Layouts
@@ -58,6 +58,9 @@ Large Language Models (LLMs) for code are a family of high-parameter, transforme
 To this end, this paper introduces ASTxplainer, an explainability method specific to LLMs for code that enables both new methods for LLM evaluation and AST visualizations of LLM predictions that aid end-users in understanding model predictions. At its core, ASTxplainer provides an automated method for aligning token predictions with AST nodes, by extracting and aggregating normalized model logits within AST structures.
 
 To demonstrate the practical benefit of ASTxplainer, we illustrate the insights that our framework can provide by performing an empirical evaluation on 12 popular LLMs for code using a curated dataset of the most popular GitHub projects. Additionally, we perform a user study examining the usefulness of an ASTxplainer-derived visualization of model predictions aimed at enabling model users to explain predictions. The results of these studies illustrate the potential for ASTxplainer to provide insights into LLM effectiveness, and aid end-users in understanding predictions.
+
+## Introduction
+The advent and proliferation of online open-source code repositories and rapid advancements in transformer-based neural large language models LLMs have served as a catalyst for the advancement of automated Software Engineering (SE) tools with rapidly advancing effectiveness. \llms for code have demonstrated considerable proficiency across a diverse array of generative SE tasks, inclusive of, but not restricted to, code completion <d-cite key="Raychev2014CodeCW"></d-cite>\cite{Raychev2014CodeCW,MSR-Completion}, program repair \cite{Chen2019sequencer,ahmad_unified_2021}, and test case generation <d-cite key="Watson:ICSE2"></d-cite>. Moreover, these advancements are rapidly being introduced into commercial developer tools such as GitHub CoPilot <d-cite key="github_copilot"></d-cite> and Replit's Ghostwriter <d-cite key="ghostwriter"></d-cite>. 
 
 ## OLD
 
