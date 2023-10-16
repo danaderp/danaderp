@@ -62,8 +62,22 @@ To demonstrate the practical benefit of ASTxplainer, we illustrate the insights 
 ## Introduction
 The advent and proliferation of online open-source code repositories and rapid advancements in transformer-based neural large language models LLMs have served as a catalyst for the advancement of automated Software Engineering (SE) tools with rapidly advancing effectiveness. \llms for code have demonstrated considerable proficiency across a diverse array of generative SE tasks, inclusive of, but not restricted to, code completion <d-cite key="Raychev2014CodeCW"></d-cite>\cite{Raychev2014CodeCW,MSR-Completion}, program repair \cite{Chen2019sequencer,ahmad_unified_2021}, and test case generation <d-cite key="Watson:ICSE2"></d-cite>. Moreover, these advancements are rapidly being introduced into commercial developer tools such as GitHub CoPilot <d-cite key="github_copilot"></d-cite> and Replit's Ghostwriter <d-cite key="ghostwriter"></d-cite>. 
 
-## OLD
+However, the sheer complexity and size that enable the often surprising effectiveness of \llms for code is a double-edged sword. That is, while these attributes enable \llms to capture important patterns in code that allow them to be applied to a range of programming tasks, effectively \textit{explaining} and \textit{evaluating} the capabilities of these models is a challenging proposition --- they effectively function as ``black boxes'' that derive predictions from exceedingly complex internal model mechanics. Current research in both designing \llms for code and in applying them to programming tasks typically makes use of existing benchmarks (\eg CodeSearchNet~\cite{husain2019codesearchnet}, or HumanEval~\cite{chen_evaluating_2021}) and metrics that have been adapted from the field of natural language processing (NLP) such as accuracy, BLEU, METEOR, and ROUGE, as well as more recent metrics further tailored for code such as CodeBLEU~\cite{ren_codebleu_2020}. However, recent work has illustrated the limitations of benchmarks such as HumanEval~\cite{liu2023code}, and there has been growing criticism of automated metrics within the NLP community~\cite{molnar2019interpret,Kim2018InterpretabilityTCAV,wan_what_2022,liu_reliability_2023}. These deficiencies largely stem from the fact that such benchmarks and metrics are often targeted at evaluating functional or syntactic correctness of generated code or task performance, but are not able to \textit{explain} model predictions or capabilities in an interpretable manner.
 
+Methods for \textit{evaluating} and \textit{explaining} \llms for code are inextricably linked to one another. An informative evaluation requires some degree of explainability of model predictions, such that model behavior can be understood at a fine-grained level. However, the fundamental challenge in achieving explainability of \llms for code lies in establishing a reliable mapping mechanism that can bridge the gap between a given model's predictions and human-understandable programming language (PL) concepts that can aid in explaining the model's decisions. As such, designing both effective evaluations and interpretability techniques for \llms of code requires that one first establish this conceptual mapping.
+
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        <p align="center">
+        <img class="img-fluid rounded z-depth-1" src="{{ '/assets/img/blog_astxplainer/fig_1_generative_process_astxplainer.png' | relative_url }}" alt="centered image" title="example image"/>
+        </p>
+    </div>
+</div>
+<div class="caption">
+    Figure 3. The evaluativa and explainability method is composed of ASC-EVal, ASC-Causal, and ASC-Viz.
+</div>
+
+## OLD
 This theme supports rendering beautiful math in inline and display modes using [MathJax 3](https://www.mathjax.org/) engine.
 You just need to surround your math expression with `$$`, like `$$ E = mc^2 $$`.
 If you leave it inside a paragraph, it will produce an inline expression, just like $$ E = mc^2 $$.
