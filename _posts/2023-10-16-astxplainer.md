@@ -196,7 +196,7 @@ In order to illustrate the insights that __ASTxplainer__ can enable, we present 
 
 $RQ_1$: _To what extent do Large Language Models for code predict syntactic structures?_
 
-To answer $RQ_1$, we generated the normalized log-probabilities or Next Token Predictions (_NtP_) for each code snippet in $\mathcal{S}=$ _galeras_. These log-probabilities were extracted at inference time for each token position for the 12 LLMs. The log-probabilities distributions have a vector size of $|V|$ for each token position in $s \in \mathcal{S}$. These distributions are processed to obtain the log-probability that actually matches the expected token in a position $i$. Therefore, each token position has an associated prediction value that we save for generating the _NtP_ sequence. Such Next-token Prediction sequence is the input for the aggregation function $\theta$ that generates the corresponding `ASCeval` values. Additionally, we computed the cross-entropy loss of each snippet $s$ in our dataset. To obtain the `ASCeval` _Global_ value in Tab.~\ref{tab:models} and Fig.~\ref{fig:asc_performance}, we aggregated `ASCeval` performance values (i.e., all available $ASC) by LLM. The values per model are bootstrapped with the median (size of 500 samplings) to enable a fair comparison among models. Similarly, to obtain the `ASCeval` per Abstract Syntax Concept Category (e.g., Data Str, Decision, or Scope), we globally aggregated performance values of tokens under these categories. We also explored with Type Model aggregations (see Table.~\ref{tab:models}).
+To answer $RQ_1$, we generated the normalized log-probabilities or Next Token Predictions (_NtP_) for each code snippet in $\mathcal{S}=$ _galeras_. These log-probabilities were extracted at inference time for each token position for the 12 LLMs. The log-probabilities distributions have a vector size of $$|V|$$ for each token position in $$s \in \mathcal{S}$$. These distributions are processed to obtain the log-probability that actually matches the expected token in a position $$i$$. Therefore, each token position has an associated prediction value that we save for generating the _NtP_ sequence. Such Next-token Prediction sequence is the input for the aggregation function $$\theta$$ that generates the corresponding `ASCeval` values. Additionally, we computed the cross-entropy loss of each snippet $$s$$ in our dataset. To obtain the `ASCeval` _Global_ value in Tab.~1 and Fig.~5, we aggregated `ASCeval` performance values (i.e., all available $ASC$) by LLM. The values per model are bootstrapped with the median (size of 500 samplings) to enable a fair comparison among models. Similarly, to obtain the `ASCeval` per Abstract Syntax Concept Category (e.g., Data Str, Decision, or Scope), we globally aggregated performance values of tokens under these categories. We also explored with Type Model aggregations.
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
@@ -206,9 +206,19 @@ To answer $RQ_1$, we generated the normalized log-probabilities or Next Token Pr
     </div>
 </div>
 <div class="caption">
-    Figure 5. Large Language Models characteristics and their associated `ASCeval` performance. Erroneous `ASCeval` values are in red. Confident `ASCeval` values are in blue. Best global `ASCeval` is underlined.
+    Table 1. Large Language Models characteristics and their associated `ASCeval` performance. Erroneous `ASCeval` values are in red. Confident `ASCeval` values are in blue. Best global `ASCeval` is underlined.
 </div>
 
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        <p align="center">
+        <img class="img-fluid rounded z-depth-1" src="{{ '/assets/img/blog_astxplainer/asc_performance.png' | relative_url }}" alt="centered image" title="example image"/>
+        </p>
+    </div>
+</div>
+<div class="caption">
+    Figure 5. `ASCeval` Performance grouped by specific LLMs and `ASCeval` density by Model Type.
+</div>
 
 ## Citation
 
