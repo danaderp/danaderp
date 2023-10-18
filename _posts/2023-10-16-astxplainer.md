@@ -192,7 +192,22 @@ Figure~3-C shows the aggregation function used to compute the prediction probabi
 
 ## Results
 
+In order to illustrate the insights that __ASTxplainer__ can enable, we present an empirical evaluation on 12 LLMs, which shows how LLMs behave for each Abstract Syntax Concept, and a user study, which assesses the usability of our approach. This section details the methodological steps and results for only the first research question. Please refer to the [pre-print](https://arxiv.org/abs/2308.03873) for the other questions and further details.  
 
+$RQ_1$: _To what extent do Large Language Models for code predict syntactic structures?_
+
+To answer $RQ_1$, we generated the normalized log-probabilities or Next Token Predictions (_NtP_) for each code snippet in $\mathcal{S}=$ _galeras_. These log-probabilities were extracted at inference time for each token position for the 12 LLMs. The log-probabilities distributions have a vector size of $|V|$ for each token position in $s \in \mathcal{S}$. These distributions are processed to obtain the log-probability that actually matches the expected token in a position $i$. Therefore, each token position has an associated prediction value that we save for generating the _NtP_ sequence. Such Next-token Prediction sequence is the input for the aggregation function $\theta$ that generates the corresponding `ASCeval` values. Additionally, we computed the cross-entropy loss of each snippet $s$ in our dataset. To obtain the `ASCeval` _Global_ value in Tab.~\ref{tab:models} and Fig.~\ref{fig:asc_performance}, we aggregated `ASCeval` performance values (i.e., all available $ASC) by LLM. The values per model are bootstrapped with the median (size of 500 samplings) to enable a fair comparison among models. Similarly, to obtain the `ASCeval` per Abstract Syntax Concept Category (e.g., Data Str, Decision, or Scope), we globally aggregated performance values of tokens under these categories. We also explored with Type Model aggregations (see Table.~\ref{tab:models}).
+
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        <p align="center">
+        <img class="img-fluid rounded z-depth-1" src="{{ '/assets/img/blog_astxplainer/table_results.png' | relative_url }}" alt="centered image" title="example image"/>
+        </p>
+    </div>
+</div>
+<div class="caption">
+    Figure 5. Large Language Models characteristics and their associated `ASCeval` performance. Erroneous `ASCeval` values are in red. Confident `ASCeval` values are in blue. Best global `ASCeval` is underlined.
+</div>
 
 
 ## Citation
