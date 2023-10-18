@@ -209,6 +209,8 @@ To answer $RQ_1$, we generated the normalized log-probabilities or Next Token Pr
     Table 1. Large Language Models characteristics and their associated `ASCeval` performance. Erroneous `ASCeval` values are in red. Confident `ASCeval` values are in blue. Best global `ASCeval` is underlined.
 </div>
 
+In this $RQ_1$, we provide an empirical value  (bootstrapped median columns in  Tab.~1) of the prediction of Abstract Syntax Concepts for the 12 LLMs. We set a threshold of $0.6$ as an acceptable rate of prediction confidence for our `ASCeval` metric. Fig.~4, for example, shows our best and worst LLMs, _mono-lang [2B]_ and _gpt-3 [125M]_ respectively, at every proposed Abstract Syntax Concept. We observe that, in general, scaling the parameters of LLMs plays a fundamental role in the prediction of $ASC$. The dashed green boxes show the largest `ASCeval` performance increments from the worst to the best concepts. Particularly, `{Exceptions}`, `{Natural Language}`, `{Operators}`, `{Types}`, and `{Decisions}` present the biggest jumps in syntactic `ASCeval` performance. 
+
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
         <p align="center">
