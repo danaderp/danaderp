@@ -211,6 +211,8 @@ To answer $RQ_1$, we generated the normalized log-probabilities or Next Token Pr
 
 In this $RQ_1$, we provide an empirical value  (bootstrapped median columns in  Tab.~1) of the prediction of Abstract Syntax Concepts for the 12 LLMs. We set a threshold of $0.6$ as an acceptable rate of prediction confidence for our `ASCeval` metric. Fig.~4, for example, shows our best and worst LLMs, _mono-lang [2B]_ and _gpt-3 [125M]_ respectively, at every proposed Abstract Syntax Concept. We observe that, in general, scaling the parameters of LLMs plays a fundamental role in the prediction of $ASC$. The dashed green boxes show the largest `ASCeval` performance increments from the worst to the best concepts. Particularly, `{Exceptions}`, `{Natural Language}`, `{Operators}`, `{Types}`, and `{Decisions}` present the biggest jumps in syntactic `ASCeval` performance. 
 
+Our empirical evaluation shows that $ASC$ categories that fulfill the $0.6$ threshold for the 12 LLMs are `{Scope}` with the highest `ASCeval` performance of $0.94$ for the _Mono-Language-Type_ models, `{Iterations}` with $0.82$ for _codegen-nl [2B]_, and `{Testing}` with $0.85$ for _mono-lang [2B]_ (see Tab.~1). Conversely, we found some concept categories struggle with `ASCeval` performance. We refer to these categories as `{erroneous}` since they are below $0.5$. Those categories are mainly `{Natural Language}` category with the largest average median of $0.46$ and `{Data Types}` with the largest average median of $0.47$ for _NL GPT-3_.
+
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
         <p align="center">
