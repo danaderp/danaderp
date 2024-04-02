@@ -4,5 +4,5 @@ permalink: /cv/
 title: cv
 nav: true
 nav_order: 6
-cv_pdf: resume_david_nader.pdf
+cv_pdf: ResumeNader_24.pdf
 ---
