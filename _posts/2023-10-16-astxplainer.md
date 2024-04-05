@@ -66,11 +66,10 @@ However, the sheer complexity and size that enable the often surprising effectiv
 
 Methods for _evaluating_ (i.e., the _what_) and _explaining_ (i.e., the _why_) LLMs for code are inextricably linked to one another. An informative evaluation requires some degree of explainability of model predictions, such that model behavior can be understood at _a fine-grained level_. However, the fundamental challenge in achieving explainability of LLMs for code lies in establishing a reliable mapping mechanism that can bridge the gap between a given model's predictions and human-understandable programming language (PL) concepts, which can aid in explaining the model's decisions. As such, designing both effective evaluations and interpretability techniques for LLMs of code requires that one first establish this conceptual mapping.
 
-<div class="row">
+
+<div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
-        <p align="center">
-        <img class="img-fluid rounded z-depth-1" src="{{ '/assets/img/blog_astxplainer/fig_1_generative_process_astxplainer.png' | relative_url }}" alt="centered image" title="example image"/>
-        </p>
+        {% include figure.liquid loading="eager" path="assets/img/blog_astxplainer/fig_1_generative_process_astxplainer.png" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
