@@ -1,8 +1,8 @@
 ---
 layout: about
-title: About
+title: about
 permalink: /
-subtitle: `Deep Learning for Software Engineering` | `Causal Inference` | `NLP` | `Explainability`
+subtitle: Deep Learning for Software Engineering | Causal Inference | NLP | Explainability
 
 profile:
   align: right
