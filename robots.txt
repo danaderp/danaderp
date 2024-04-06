@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: /danaderp//sitemap.xml
+Sitemap: https://danaderp.github.io//sitemap.xml
