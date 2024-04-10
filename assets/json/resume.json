@@ -30,6 +30,14 @@
       "endDate": "2022-03",
       "summary": "Published a patent for an innovative debugging tool designed to provide recourse to practitioners in explaining deep generative models trained on code as data. Worked in collaboration with four Microsoft Senior research scientists.",
       "highlights": ["Post Hoc Interpretability"]
+    },
+    {
+      "name": "Cisco Systems",
+      "position": "PhD Intern",
+      "startDate": "2020-05",
+      "endDate": "2020-08",
+      "summary": "Investigated an information theory approach for interpreting and evaluating software retrieval techniques.",
+      "highlights": ["Information Theory, Traceability"]
     }
   ],
   "volunteer": [
