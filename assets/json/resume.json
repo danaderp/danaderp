@@ -38,17 +38,33 @@
       "endDate": "2020-08",
       "summary": "Investigated an information theory approach for interpreting and evaluating software retrieval techniques.",
       "highlights": ["Information Theory, Traceability"]
+    },
+    {
+      "name": "KSMTI",
+      "position": "Software Engineer (Senior Back‑end)",
+      "startDate": "2016-02",
+      "endDate": "2016-12",
+      "summary": "Engineered reactive and functional programming architectures for enabling fast development of any type of marketplace business.",
+      "highlights": ["Scala, Functional Programming"]
     }
   ],
   "research": [
     {
-      "organization": "People's Climate March",
-      "position": "Lead Organizer",
-      "url": "https://example.com",
-      "startDate": "2014-04-01",
-      "endDate": "2015-07-01",
-      "summary": "Lead organizer for the New York City branch of the People's Climate March, the largest climate march in history.",
-      "highlights": ["Awarded 'Climate Hero' award by Greenpeace for my efforts organizing the march.", "Men of the year 2014 by Time magazine"]
+      "organization": "Semeru Research Group (W&M)",
+      "position": "Research Assistant",
+      "url": "https://www.cs.wm.edu/semeru/",
+      "startDate": "2017-01",
+      "endDate": "Present",
+      "summary": "Worked at the SEMERU Research Group as a Lead Researcher under the advisement of Professor Denys Poshyvanyk Ph.D, published 12 research papers across various top‑tier Software Engineering conferences and journals.",
+      "highlights": ["Causal Inference", "Deep Code Generation", "Interpretability"]
+    },
+    {
+      "organization": "National University of Colombia",
+      "position": "Graduate Researcher",
+      "startDate": "2014-06",
+      "endDate": "2022-06",
+      "summary": "Developed a hybrid adaptive evolutionary algorithm in Java/Scala to detect and recommend feasible software refactorings.",
+      "highlights": ["Evolutionary Computation"]
     }
   ],
   "education": [
