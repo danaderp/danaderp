@@ -20,3 +20,6 @@
 "ICSME":
   url: https://conf.researchr.org/series/icse
   color: "#b509ac"
+
+"PATENT":
+  color: "#00ab37"
