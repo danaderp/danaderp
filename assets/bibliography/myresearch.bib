@@ -1,13 +1,5 @@
 
-@patent{patent:20240104001,
- title     = "Patent: Debugging Tool for Code Generation Neural Language Models",
- number    = "20240104001",
- author    = "Clement, Colin Bruce (SEATTLE, WA, US), Nader Palacio, David Alberto (WILLIAMSBURG, VA, US), Sundaresan, Neelakantan (BELLEVUE, WA, US), Svyatkovskiy, Alexey (BELLEVUE, WA, US), Tufano, Michele (BELLEVUE, WA, US)",
- year      = "2024",
- month     = "March",
- url       = "https://www.freepatentsonline.com/y2024/0104001.html",
- html      = "https://www.freepatentsonline.com/y2024/0104001.html",
-}
+
 
 @article{mastropaolo_using_2023,
 	title = {Using Transfer Learning for Code-Related Tasks},
@@ -59,55 +51,7 @@
 	file = {Palacio et al. - 2023 - Evaluating and Explaining Large Language Models fo.pdf:C\:\\Users\\David\\Zotero\\storage\\UDFCA9EE\\Palacio et al. - 2023 - Evaluating and Explaining Large Language Models fo.pdf:application/pdf},
 }
 
-@article{mastropaolo_using_2023,
-	title = {Using Transfer Learning for Code-Related Tasks},
-	volume = {49},
-	issn = {0098-5589, 1939-3520, 2326-3881},
-	url = {https://ieeexplore.ieee.org/document/9797060/},
-	doi = {10.1109/TSE.2022.3183297},
-	abstract = {Deep learning ({DL}) techniques have been used to support several code-related tasks such as code summarization and bug-ﬁxing. In particular, pre-trained transformer models are on the rise, also thanks to the excellent results they achieved in Natural Language Processing ({NLP}) tasks. The basic idea behind these models is to ﬁrst pre-train them on a generic dataset using a self-supervised task (e.g., ﬁlling masked words in sentences). Then, these models are ﬁne-tuned to support speciﬁc tasks of interest (e.g., language translation). A single model can be ﬁne-tuned to support multiple tasks, possibly exploiting the beneﬁts of transfer learning. This means that knowledge acquired to solve a speciﬁc task (e.g., language translation) can be useful to boost performance on another task (e.g., sentiment classiﬁcation). While the beneﬁts of transfer learning have been widely studied in {NLP}, limited empirical evidence is available when it comes to code-related tasks. In this paper, we assess the performance of the Text-To-Text Transfer Transformer (T5) model in supporting four different code-related tasks: (i) automatic bug-ﬁxing, (ii) injection of code mutants, (iii) generation of assert statements, and (iv) code summarization. We pay particular attention in studying the role played by pre-training and multi-task ﬁne-tuning on the model’s performance. We show that (i) the T5 can achieve better performance as compared to state-of-the-art baselines; and (ii) while pre-training helps the model, not all tasks beneﬁt from a multi-task ﬁne-tuning.},
-	pages = {1580--1598},
-	number = {4},
-	journaltitle = {{IIEEE} Trans. Software Eng.},
-	author = {Mastropaolo, Antonio and Cooper, Nathan and Palacio, David Nader and Scalabrino, Simone and Poshyvanyk, Denys and Oliveto, Rocco and Bavota, Gabriele},
-	urldate = {2023-07-19},
-	date = {2023-04-01},
-	langid = {english},
-	abbr={TSE},
-	html={https://ieeexplore.ieee.org/document/9797060/}
-}
 
-@article{palacio_toward_2023,
-	title = {Toward a Theory of Causation for Interpreting Neural Code Models},
-	url = {http://arxiv.org/abs/2302.03788},
-	abstract = {Neural Language Models of Code, or Neural Code Models ({NCMs}), are rapidly progressing from research prototypes to commercial developer tools. As such, understanding the capabilities and limitations of such models is becoming critical. However, the abilities of these models are typically measured using automated metrics that often only reveal a portion of their real-world performance. While, in general, the performance of {NCMs} appears promising, currently much is unknown about how such models arrive at decisions. To this end, this paper introduces docode, a post-hoc interpretability methodology speciﬁc to {NCMs} that is capable of explaining model predictions. docode is based upon causal inference to enable programming language-oriented explanations. While the theoretical underpinnings of docode are extensible to exploring different model properties, we provide a concrete instantiation that aims to mitigate the impact of spurious correlations by grounding explanations of model behavior in properties of programming languages. To demonstrate the practical beneﬁt of docode, we illustrate the insights that our framework can provide by performing a case study on two popular deep learning architectures and nine {NCMs}. The results of this case study illustrate that our studied {NCMs} are sensitive to changes in code syntax and statistically learn to predict tokens related to blocks of code (e.g., brackets, parenthesis, semicolon) with less confounding bias as compared to other programming language constructs. These insights demonstrate the potential of docode as a useful model debugging mechanism that may aid in discovering biases and limitations in {NCMs}.},
-	number = {{arXiv}:2302.03788},
-	publisher = {{arXiv}},
-	author = {Palacio, David N. and Cooper, Nathan and Rodriguez, Alvaro and Moran, Kevin and Poshyvanyk, Denys},
-	urldate = {2023-08-22},
-	date = {2023-02-07},
-	langid = {english},
-	eprinttype = {arxiv},
-	eprint = {2302.03788 [cs, stat]},
-	keywords = {Computer Science - Artificial Intelligence, Computer Science - Machine Learning, Computer Science - Software Engineering, Statistics - Methodology},
-	arxiv={http://arxiv.org/abs/2302.03788}
-}
-
-@article{palacio_evaluating_2023,
-	title = {Evaluating and Explaining Large Language Models for Code Using Syntactic Structures},
-	url = {http://arxiv.org/abs/2308.03873},
-	abstract = {Large Language Models ({LLMs}) for code are a family of high-parameter, transformer-based neural networks pre-trained on massive datasets of both natural and programming languages. These models are rapidly being employed in commercial {AI}-based developer tools, such as {GitHub} {CoPilot}. However, measuring and explaining their effectiveness on programming tasks is a challenging proposition, given their size and complexity. The methods for evaluating and explaining {LLMs} for code are inextricably linked. That is, in order to explain a model’s predictions, they must be reliably mapped to fine-grained, understandable concepts. Once this mapping is achieved, new methods for detailed model evaluations are possible. However, most current explainability techniques and evaluation benchmarks focus on model robustness or individual task performance, as opposed to interpreting model predictions. To this end, this paper introduces {ASTxplainer}, an explainability method specific to {LLMs} for code that enables both new methods for {LLM} evaluation and visualizations of {LLM} predictions that aid end-users in understanding model predictions. At its core, {ASTxplainer} provides an automated method for aligning token predictions with {AST} nodes, by extracting and aggregating normalized model logits within {AST} structures. To demonstrate the practical benefit of {ASTxplainer}, we illustrate the insights that our framework can provide by performing an empirical evaluation on 12 popular {LLMs} for code using a curated dataset of the most popular {GitHub} projects. Additionally, we perform a user study examining the usefulness of an {ASTxplainer}-derived visualization of model predictions aimed at enabling model users to explain predictions. The results of these studies illustrate the potential for {ASTxplainer} to provide insights into {LLM} effectiveness, and aid end-users in understanding predictions.},
-	number = {{arXiv}:2308.03873},
-	publisher = {{arXiv}},
-	author = {Palacio, David N. and Velasco, Alejandro and Rodriguez-Cardenas, Daniel and Moran, Kevin and Poshyvanyk, Denys},
-	urldate = {2023-08-22},
-	date = {2023-08-07},
-	langid = {english},
-	eprinttype = {arxiv},
-	eprint = {2308.03873 [cs]},
-	keywords = {Computer Science - Machine Learning, Computer Science - Software Engineering},
-	arxiv = {http://arxiv.org/abs/2308.03873}
-}
 
 @article{watson_systematic_2022,
 	author = {Watson, Cody and Cooper, Nathan and Palacio, David Nader and Moran, Kevin and Poshyvanyk, Denys},
