@@ -16,3 +16,7 @@
 "ICSE":
   url: https://conf.researchr.org/series/icse
   color: "#f29105"
+
+"ICSME":
+  url: https://conf.researchr.org/series/icse
+  color: "#b509ac"
