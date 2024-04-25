@@ -1,14 +1,18 @@
 "AJP":
   url: https://aapt.scitation.org/journal/ajp
-  color: "#00369f"
+  color: "#0076df"
 
 "TSE":
   url: https://www.computer.org/csdl/journal/ts
-  color: "#00369f"
+  color: "#0076df"
 
 "TOSEM":
   url: https://dl.acm.org/journal/tosem
-  color: "#00369f"
+  color: "#0076df"
 
 "PhysRev":
   url: https://journals.aps.org/
+
+"ICSE":
+  url: https://conf.researchr.org/series/icse
+  color: "#f29105"
