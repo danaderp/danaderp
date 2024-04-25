@@ -8,7 +8,7 @@ nav_order: 2
 ---
 
 <!-- _pages/publications.md -->
-<div class="post">
+<div class="publications">
 
 {% bibliography %}
 
