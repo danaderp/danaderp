@@ -160,38 +160,17 @@
 	file = {Palacio et al. - 2019 - Learning to Identify Security-Related Issues Using.pdf:C\:\\Users\\David\\Zotero\\storage\\IMR9JKVY\\Palacio et al. - 2019 - Learning to Identify Security-Related Issues Using.pdf:application/pdf},
 }
 
-@inproceedings{10.1145/3205651.3208294,
-	author = {Nader-Palacio, David and Rodr\'{\i}guez-C\'{a}rdenas, Daniel and Gomez, Jonatan},
-	title = {Assessing Single-Objective Performance Convergence and Time Complexity for Refactoring Detection},
-	year = {2018},
-	isbn = {9781450357647},
-	publisher = {Association for Computing Machinery},
-	address = {New York, NY, USA},
-	url = {https://doi.org/10.1145/3205651.3208294},
-	doi = {10.1145/3205651.3208294},
-	abstract = {The automatic detection of refactoring recommendations has been tackled in prior optimization
-	studies involving bad code smells, semantic coherence and importance of classes; however,
-	such studies informally addressed formalisms to standardize and replicate refactoring
-	models. We propose to assess the refactoring detection by means of performance convergence
-	and time complexity. Since the reported approaches are difficult to reproduce, we
-	employ an Artificial Refactoring Generation (ARGen) as a formal and naive computational
-	solution for the Refactoring Detection Problem. ARGen is able to detect massive refactoring's
-	sets in feasible areas of the search space. We used a refactoring formalization to
-	adapt search techniques (Hill Climbing, Simulated Annealing and Hybrid Adaptive Evolutionary
-	Algorithm) that assess the performance and complexity on three open software systems.
-	Combinatorial techniques are limited in solving the Refactoring Detection Problem
-	due to the relevance of developers' criteria (human factor) when designing reconstructions.
-	Without performance convergence and time complexity analysis, a software empirical
-	analysis that utilizes search techniques is incomplete.},
-	booktitle = {Proceedings of the Genetic and Evolutionary Computation Conference Companion},
-	pages = {1606–1613},
-	numpages = {8},
-	keywords = {combinatorial optimization, mathematical software performance, refactoring, software maintenance},
-	location = {Kyoto, Japan},
-	series = {GECCO '18},
-	selected={true},
-	html = {https://doi.org/10.1145/3205651.3208294},
+@article{palacio_learning_2019,
+	title = {Learning to Identify Security-Related Issues Using Convolutional Neural Networks},
+	html = {http://arxiv.org/abs/1908.00614},
+	abstract = {Software security is becoming a high priority for both large companies and start-ups alike due to the increasing potential for harm that vulnerabilities and breaches carry with them. However, attaining robust security assurance while delivering features requires a precarious balancing act in the context of agile development practices. One path forward to help aid development teams in securing their software products is through the design and development of security-focused automation. Ergo, we present a novel approach, called {SecureReqNet}, for automatically identifying whether issues in software issue tracking systems describe security-related content. Our approach consists of a two-phase neural net architecture that operates purely on the natural language descriptions of issues. The ﬁrst phase of our approach learns high dimensional word embeddings from hundreds of thousands of vulnerability descriptions listed in the {CVE} database and issue descriptions extracted from open source projects. The second phase then utilizes the semantic ontology represented by these embeddings to train a convolutional neural network capable of predicting whether a given issue is securityrelated. We evaluated {SecureReqNet} by applying it to identify security-related issues from a dataset of thousands of issues mined from popular projects on {GitLab} and {GitHub}. In addition, we also applied our approach to identify security-related requirements from a commercial software project developed by a major telecommunication company. Our preliminary results are encouraging, with {SecureReqNet} achieving an accuracy of 96\% on open source issues and 71.6\% on industrial requirements.},
+	publisher = {{arXiv}},
+	author = {Palacio, David N. and {McCrystal}, Daniel and Moran, Kevin and Bernal-Cárdenas, Carlos and Poshyvanyk, Denys and Shenefiel, Chris},
+	urldate = {2023-07-19},
+	date = {2019-08-05},
+	eprint = {1908.00614 [cs]},
+	keywords = {Computer Science - Software Engineering},
+  	abbr = {ICSME},
+  	code = {https://github.com/WM-SEMERU/SecureReqNet}
 }
-
-
 
