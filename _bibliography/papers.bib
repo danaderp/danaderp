@@ -13,7 +13,8 @@
   abbr={TSE},
   html={https://ieeexplore.ieee.org/document/10477672},
   abstract={Neural Language Models of Code, or Neural Code Models (NCMs), are rapidly progressing from research prototypes to commercial developer tools. As such, understanding the capabilities and limitations of such models is becoming critical. However, the abilities of these models are typically measured using automated metrics that often only reveal a portion of their real-world performance. While, in general, the performance of NCMs appears promising, currently much is unknown about how such models arrive at decisions. To this end, this paper introduces docode, a post hoc interpretability method specific to NCMs that is capable of explaining model predictions. docode is based upon causal inference to enable programming language-oriented explanations. While the theoretical underpinnings of docode are extensible to exploring different model properties, we provide a concrete instantiation that aims to mitigate the impact of spurious correlations by grounding explanations of model behavior in properties of programming languages. To demonstrate the practical benefit of docode, we illustrate the insights that our framework can provide by performing a case study on two popular deep learning architectures and ten NCMs. The results of this case study illustrate that our studied NCMs are sensitive to changes in code syntax. All our NCMs, except for the BERT-like model, statistically learn to predict tokens related to blocks of code (\eg brackets, parenthesis, semicolon) with less confounding bias as compared to other programming language constructs. These insights demonstrate the potential of docode as a useful method to detect and facilitate the elimination of confounding bias in NCMs.},
-  code={https://github.com/WM-SEMERU/CausalSE}
+  code={https://github.com/WM-SEMERU/CausalSE},
+  arxiv={2302.03788}
 }
 
 @article{Velasco2024WhichSC,
@@ -85,7 +86,8 @@
 	eprinttype = {arxiv},
 	eprint = {2308.03873 [cs]},
 	keywords = {Computer Science - Machine Learning, Computer Science - Software Engineering},
-	arxiv = {2308.03873}
+	arxiv = {2308.03873},
+  abbr = {ArXiv}
 }
 
 @article{watson_systematic_2022,
@@ -126,6 +128,21 @@
   html = {https://dl.acm.org/doi/10.1145/3377811.3380418},
   abbr = {ICSE},
   abstract = {Traceability is a fundamental component of the modern software development process that helps to ensure properly functioning, secure programs. Due to the high cost of manually establishing trace links, researchers have developed automated approaches that draw relationships between pairs of textual software artifacts using similarity measures. However, the effectiveness of such techniques are often limited as they only utilize a single measure of artifact similarity and cannot simultaneously model (implicit and explicit) relationships across groups of diverse development artifacts.}
+}
+
+@article{palacio_learning_2019,
+	title = {Learning to Identify Security-Related Issues Using Convolutional Neural Networks},
+  year = {2019},
+	html = {http://arxiv.org/abs/1908.00614},
+	abstract = {Software security is becoming a high priority for both large companies and start-ups alike due to the increasing potential for harm that vulnerabilities and breaches carry with them. However, attaining robust security assurance while delivering features requires a precarious balancing act in the context of agile development practices. One path forward to help aid development teams in securing their software products is through the design and development of security-focused automation. Ergo, we present a novel approach, called {SecureReqNet}, for automatically identifying whether issues in software issue tracking systems describe security-related content. Our approach consists of a two-phase neural net architecture that operates purely on the natural language descriptions of issues. The ﬁrst phase of our approach learns high dimensional word embeddings from hundreds of thousands of vulnerability descriptions listed in the {CVE} database and issue descriptions extracted from open source projects. The second phase then utilizes the semantic ontology represented by these embeddings to train a convolutional neural network capable of predicting whether a given issue is securityrelated. We evaluated {SecureReqNet} by applying it to identify security-related issues from a dataset of thousands of issues mined from popular projects on {GitLab} and {GitHub}. In addition, we also applied our approach to identify security-related requirements from a commercial software project developed by a major telecommunication company. Our preliminary results are encouraging, with {SecureReqNet} achieving an accuracy of 96\% on open source issues and 71.6\% on industrial requirements.},
+	publisher = {{arXiv}},
+	author = {Palacio, David N. and {McCrystal}, Daniel and Moran, Kevin and Bernal-Cárdenas, Carlos and Poshyvanyk, Denys and Shenefiel, Chris},
+	urldate = {2023-07-19},
+	date = {2019-08-05},
+	eprint = {1908.00614 [cs]},
+	keywords = {Computer Science - Software Engineering},
+  abbr = {ICSME},
+  code = {https://github.com/WM-SEMERU/SecureReqNet}
 }
 
 @inproceedings{10.1145/3205651.3208294,
