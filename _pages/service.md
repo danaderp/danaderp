@@ -26,4 +26,4 @@ nav_order: 4
 - Inspiration Information Sessions May 2024 at SAP. Talk: "Toward a Theory of Causation for Interpreting LLMs for Code"
 
 ### Advised Students
-- Alvaro Rodriguez, (2022) M.S., *Understanding and Implementing Deep Neural Networks for Unconditional Source Code Generation* [thesis](https://repositorio.unal.edu.co/handle/unal/82449).
+- Alvaro Rodriguez, (2022) M.S., *Understanding and Implementing Deep Neural Networks for Unconditional Source Code Generation* [[thesis]](https://repositorio.unal.edu.co/handle/unal/82449).
