@@ -17,7 +17,7 @@ nav_order: 4
 - [[ICSE'21]](https://doi.ieeecomputersociety.org/10.1109/ICSE-Companion52605.2021.00008): IEEE/ACM 43rd International Conference on Software Engineering: Companion Proceedings (ICSE-Companion)
 - [[MOBILESoft]](https://conf.researchr.org/home/mobilesoft-2020): IEEE/ACM 7th International Conference on Mobile Software Engineering and Systems (MOBILESoft)
 - [[MSR'19]](https://2019.msrconf.org/): IEEE/ACM 16th International Conference on Mining Software Repositories (MSR)
-- [TOSEM] ACM Transactions on Software Engineering and Methodology
+- [[TOSEM]](https://dl.acm.org/journal/tosem): ACM Transactions on Software Engineering and Methodology
 
 ### Student Volunteer 
 - The 42nd International Conference on Software Engineering [[ICSE'20]](https://conf.researchr.org/home/icse-2020)
