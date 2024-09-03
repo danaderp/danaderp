@@ -6,7 +6,7 @@ subtitle: Deep Learning for Software Engineering | Causal Inference | NLP | Expl
 
 profile:
   align: right
-  image: /profile/profile5.jpg
+  image: /profile/profile6.jpg
   image_circular: true # crops the image to make it circular
   more_info: >
     <p>Williamsburg, VA</p>
