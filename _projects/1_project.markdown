@@ -7,6 +7,10 @@ importance: 1
 category: interpretability
 ---
 
+>
+> By @computoloco | Updated: 20.12.24
+>
+
 This blog proposes a data science analysis that contributes to inform decision making in software engineering teams about traceability & retrieval of software artifacts. More specifically, the goal of this document is to articulate cases where the information captured in these artifacts might make it difficult for a developer to be able to effectively trace them to various locations in source code where they are implemented. For example, consider a situation where a development team needs to modify the XXX system based on an incoming new requirement. How should the developers proceed if we assume they are not familiar with all the components of the system or codebase? They probably will start by _tracing_ functionality between previous requirements  and the code by reading the associated documentation (e.g. code comments etc.). However, what if the descriptions in the requirements artifacts are _poorly written_?  Or what if certain areas of the source code are not completely documented or use obscure identifiers? Likely, the traceability process that a developer would undertake to understand the impact of the new requirement would be cumbersome and inefficient. We use information science and automated traceability to identify potential artifacts that might negatively contribute to the understandability of a given system. We briefly discuss an overview of our findings from this analysis below.
 
 For the XXX system we found that oftentimes, pull request comments and the associated source code often contain different information. That is, it is very likely that the pull request comments and source code and its comments are describing disparate information. This is based on an information theoretic analysis that carries a 95% confidence which signals that pull requests contain [3.42 ± 0.02] bits and source code contains [5.91 ±  0.01] bits of information respectively. Such an imbalance of information should be avoided as it suggests that the code changes might not accurately capture the information content of the pull request. What could _high quality_ mean in this context? A well-written pull request is an artifact that a software engineer can easily trace on the source code documentation. This report lists concrete examples in the last section where potential links suffer from imbalance. This current automated analysis can be used to detect these instances of information mismatch, and our planned follow up work will attempt to make semantically meaningful suggestions for revisions to improve the documentation.
@@ -294,14 +298,17 @@ This case study introduces orphan informative links or potential links with a hi
 _Discussion_. Orphan links not only exhibit inconsistencies in the ground truth file but also suggest potential positive links independent of the employed unsupervised technique. The previous examples need to be further analyzed to decide if they are actually a link. Otherwise, we need to find an explanation of why they are sharing such an amount of information.  
 
 ## Citation
+Further details can be found in our Pre-print [[ArXiv :page_facing_up:](https://arxiv.org/abs/2412.04704)]
 
 ```latex
-@misc{palacio2023tracexplainer,
-    title={Information Theory for Interpreting Software Traceability},
-    author={David N. Palacio},
-    year={2023},
-    archivePrefix={arXiv},
-    primaryClass={cs.SE}
+@misc{palacio2024interpretingeffectivenessunsupervisedsoftware,
+      title={On Interpreting the Effectiveness of Unsupervised Software Traceability with Information Theory}, 
+      author={David N. Palacio and Daniel Rodriguez-Cardenas and Denys Poshyvanyk and Kevin Moran},
+      year={2024},
+      eprint={2412.04704},
+      archivePrefix={arXiv},
+      primaryClass={cs.SE},
+      url={https://arxiv.org/abs/2412.04704}, 
 }
 ```
 
