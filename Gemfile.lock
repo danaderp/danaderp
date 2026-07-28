@@ -15,6 +15,28 @@ GEM
       tzinfo (~> 2.0, >= 2.0.5)
     addressable (2.9.0)
       public_suffix (>= 2.0.2, < 8.0)
+    al_cookie (1.0.0)
+      jekyll (>= 3.9, < 5.0)
+      liquid (>= 4.0, < 6.0)
+    al_folio_core (1.0.11)
+      jekyll (>= 3.9, < 5.0)
+      liquid (>= 4.0, < 6.0)
+    al_folio_cv (1.0.0)
+      jekyll (>= 3.9, < 5.0)
+      liquid (>= 4.0, < 6.0)
+    al_folio_distill (1.0.2)
+      jekyll (>= 3.9, < 5.0)
+      liquid (>= 4.0, < 6.0)
+    al_folio_upgrade (1.0.3)
+      al_folio_core (>= 1.0.0)
+      jekyll (>= 3.9, < 5.0)
+      liquid (>= 4.0, < 6.0)
+    al_icons (1.0.0)
+      jekyll (>= 3.9, < 5.0)
+      liquid (>= 4.0, < 6.0)
+    al_math (1.0.1)
+      jekyll (>= 3.9, < 5.0)
+      liquid (>= 4.0, < 6.0)
     base64 (0.3.0)
     benchmark (0.5.0)
     bibtex-ruby (6.2.0)
@@ -159,6 +181,8 @@ GEM
       jekyll (~> 4.0)
     jekyll-sitemap (1.4.0)
       jekyll (>= 3.7, < 5.0)
+    jekyll-tabs (1.2.1)
+      jekyll (>= 3.0, < 5.0)
     jekyll-toc (0.19.0)
       jekyll (>= 3.9)
       nokogiri (~> 1.12)
@@ -273,6 +297,13 @@ PLATFORMS
   x86_64-linux-musl
 
 DEPENDENCIES
+  al_cookie (= 1.0.0)
+  al_folio_core (= 1.0.11)
+  al_folio_cv (= 1.0.0)
+  al_folio_distill (= 1.0.2)
+  al_folio_upgrade (= 1.0.3)
+  al_icons (= 1.0.0)
+  al_math (= 1.0.1)
   classifier-reborn
   css_parser
   feedjira
@@ -289,6 +320,7 @@ DEPENDENCIES
   jekyll-paginate-v2
   jekyll-scholar
   jekyll-sitemap
+  jekyll-tabs
   jekyll-toc
   jekyll-twitter-plugin
   jemoji
@@ -298,6 +330,13 @@ DEPENDENCIES
 CHECKSUMS
   activesupport (7.2.3.1) sha256=11ebed516a43a0bb47346227a35ebae4d9427465a7c9eb197a03d5c8d283cb34
   addressable (2.9.0) sha256=7fdf6ac3660f7f4e867a0838be3f6cf722ace541dd97767fa42bc6cfa980c7af
+  al_cookie (1.0.0) sha256=0b36310f84c88e758fb18f2217e8fca8a282b8bd7f5ee9793c6d38ca0cc97348
+  al_folio_core (1.0.11) sha256=0792345ede34af0e685f575520fb8c588fdb8f0207a6a743cc7760d880e49871
+  al_folio_cv (1.0.0) sha256=aa54c6efb38f46c5da09e09b82b4b050b5ce3b384f808922dc4fd665e10a840e
+  al_folio_distill (1.0.2) sha256=14075b8654a85f76e5e1d8adf8e6c7abcf7b618a4f83a622fa4d5054cd64c709
+  al_folio_upgrade (1.0.3) sha256=434ffddb27705852eae0bcaa01a8d007e0ef65472a989d1a33ae759f910f4709
+  al_icons (1.0.0) sha256=7a7b6428d18e77b039aa1ae765a3faed0ae27cb646a08c1009b145c31ca5ef2d
+  al_math (1.0.1) sha256=c66d402821a9efb997e63501654116ab9683401cb80ac9365c4a013afed4f2c4
   base64 (0.3.0) sha256=27337aeabad6ffae05c265c450490628ef3ebd4b67be58257393227588f5a97b
   benchmark (0.5.0) sha256=465df122341aedcb81a2a24b4d3bd19b6c67c1530713fd533f3ff034e419236c
   bibtex-ruby (6.2.0) sha256=d610eba78d6adf503a843daf144644449fb34e7c3f4a75e9ab67fae5dfd7c69a
@@ -358,6 +397,7 @@ CHECKSUMS
   jekyll-sass-converter (3.1.0) sha256=83925d84f1d134410c11d0c6643b0093e82e3a3cf127e90757a85294a3862443
   jekyll-scholar (7.3.0) sha256=d912e60aa5ab342fb4322772f02674152e2799375612a2aa5f9b2228728fd09b
   jekyll-sitemap (1.4.0) sha256=0de08c5debc185ea5a8f980e1025c7cd3f8e0c35c8b6ef592f15c46235cf4218
+  jekyll-tabs (1.2.1) sha256=e7e0f05d1180c9651318fb5834a0c745a613b4253e9699a662b63cc3d39cbc4d
   jekyll-toc (0.19.0) sha256=8a8270f7e8e3d849e2035710b1713d0af5e2185a4bfaca70f9192ecf5ac50668
   jekyll-twitter-plugin (2.1.0) sha256=d25ee86813705244dcec3163d9a110a1c0216e157dcf6cf88ab57cf389887acd
   jekyll-watch (2.2.1) sha256=bc44ed43f5e0a552836245a54dbff3ea7421ecc2856707e8a1ee203a8387a7e1
