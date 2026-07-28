@@ -73,7 +73,8 @@ jobs:
       - name: Install build prerequisites 🔧
         run: |
           sudo apt-get update && sudo apt-get install -y imagemagick
-          pip3 install --upgrade nbconvert
+          bash bin/setup-python-deps
+          echo "$HOME/.local/bin" >> "$GITHUB_PATH"
 
       - name: Run comments integration test 🧪
         run: bash test/integration_comments.sh

@@ -2,7 +2,9 @@
 set -euo pipefail
 
 echo "Installing optional Python deps for jekyll-jupyter-notebook..."
-python3 -m pip install --user --break-system-packages jupyter nbconvert
+if ! python3 -m pip install --user --break-system-packages jupyter nbconvert; then
+  python3 -m pip install --user jupyter nbconvert
+fi
 
 echo
 echo "If your shell cannot find jupyter binaries, add this to your shell profile:"
