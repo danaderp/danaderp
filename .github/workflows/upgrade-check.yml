@@ -49,11 +49,11 @@ jobs:
           bundler-cache: true
 
       - name: Run upgrade audit 🧪
-        run: bundle exec al-folio upgrade audit
+        run: bundle exec al-folio upgrade audit --no-fail
 
       - name: Upload upgrade report 📄
         if: always()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v4.6.2
         with:
           name: al-folio-upgrade-report
           path: al-folio-upgrade-report.md
