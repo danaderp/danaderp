@@ -5,5 +5,5 @@ inline: true
 related_posts: false
 ---
 
-Our pre-print, __Towards More Trustworthy and Interpretable LLMs for Code through Syntax-Grounded Explanations__ has been published.  
-🖋  [Pre-Print](https://arxiv.org/abs/2407.08983)
+Our pre-print, **Towards More Trustworthy and Interpretable LLMs for Code through Syntax-Grounded Explanations** has been published.  
+🖋 [Pre-Print](https://arxiv.org/abs/2407.08983)

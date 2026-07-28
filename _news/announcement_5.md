@@ -5,5 +5,5 @@ inline: true
 related_posts: false
 ---
 
-Great News🎉! Our patent, __Debugging Tool for Code Generation Neural Language Models__ has been published [United States Patent Application 20240104001].  
-🖋  [Patent](https://www.freepatentsonline.com/y2024/0104001.html)
+Great News🎉! Our patent, **Debugging Tool for Code Generation Neural Language Models** has been published [United States Patent Application 20240104001].  
+🖋 [Patent](https://www.freepatentsonline.com/y2024/0104001.html)

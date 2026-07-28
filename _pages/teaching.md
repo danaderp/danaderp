@@ -6,5 +6,3 @@ description: Materials for courses taught.
 nav: false
 nav_order: 6
 ---
-
-

@@ -122,14 +122,7 @@
       "name": "Deep Learning for Software Engineering",
       "level": "PhD",
       "icon": "fa-solid fa-hashtag",
-      "keywords": [
-        "PyMC3",
-        "PyTorch",
-        "Foundation Models",
-        "LLMs for Code",
-        "Unsupervised Models",
-        "Code Generation"
-      ]
+      "keywords": ["PyMC3", "PyTorch", "Foundation Models", "LLMs for Code", "Unsupervised Models", "Code Generation"]
     }
   ],
   "languages": [
@@ -153,14 +146,7 @@
     {
       "name": "LLMs for Code",
       "icon": "fa-solid fa-tag",
-      "keywords": [
-        "Explainability",
-        "Interpretability",
-        "Trustworthiness",
-        "Causal Inference",
-        "Representation Learning",
-        "Data Analysis"
-      ]
+      "keywords": ["Explainability", "Interpretability", "Trustworthiness", "Causal Inference", "Representation Learning", "Data Analysis"]
     }
   ]
 }

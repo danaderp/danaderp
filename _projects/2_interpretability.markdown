@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Deep Learning Interpretability 
+title: Deep Learning Interpretability
 description: For Software Engineering
 img: /assets/img/proj2/asc_causal.png
 importance: 1
@@ -15,7 +15,7 @@ According to [Molnar](https://x.com/ChristophMolnar/status/1693538937736728606?s
 4. Offering recourse
 5. Generating insights (explanations)
 
-We can extend this applications to the intersection of deep learning and software engineeering (DL4SE). The goal of this blog is to expose how interpretability is useful for SE deep learning models and what are the most practical scenearios in which we can apply interpretability. 
+We can extend this applications to the intersection of deep learning and software engineeering (DL4SE). The goal of this blog is to expose how interpretability is useful for SE deep learning models and what are the most practical scenearios in which we can apply interpretability.
 
 ### First Application: Debugging a model
 
@@ -38,4 +38,3 @@ We can extend this applications to the intersection of deep learning and softwar
     primaryClass={cs.SE}
 }
 ```
-

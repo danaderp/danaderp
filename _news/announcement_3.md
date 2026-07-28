@@ -6,9 +6,10 @@ inline: false
 related_posts: false
 ---
 
+---
 
-***
 #### Hipster list
+
 <ul>
     <li>brunch</li>
     <li>fixie</li>
