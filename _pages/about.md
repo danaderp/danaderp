@@ -2,24 +2,24 @@
 layout: about
 title: about
 permalink: /
-subtitle: Deep Learning for Software Engineering | Causal Inference | NLP | Explainability
+subtitle: Artificial Software Engineering | Causal Inference | Neuro-Symbolic AI | Complexity Science
 
 profile:
   align: right
   image: /profile/profile6.jpg
   image_circular: true # crops the image to make it circular
   more_info: >
-    <p>Williamsburg, VA</p>
+    <p>Seattle, WA</p>
 
 news: true # includes a list of news items
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 ---
 
-Ph.D. Candidate in Computer Science at William & Mary, [SEMERU Research Group](https://www.cs.wm.edu/semeru/people.html) supervised by [Professor Denys Poshyvanyk](https://www.cs.wm.edu/~denys/). My dissertation concentrates on interpretable methods for deep learning code generators, specifically, towards using causal inference to explain deep software generative models. I have been working on different projects as a Software Researcher, including refactoring automation with genetic algorithms; improving the effectiveness of traceability link recovery using Information Retrieval (IR) and Deep Learning (DL); and employing pre-trained models for classifying security issues and requirements.
+I am a Senior Applied Scientist @ Microsoft specializing in Artificial Intelligence and Software Research, with over 8 years of experience in machine learning and software engineering research. My expertise spans machine learning model interpretability, Large Language Model (LLM) evaluation, causal inference, and evolutionary computation, which I apply to building trustworthy, production-grade AI systems at scale.
 
-During my internship at CISCO Systems, I delved into the utilization of vector representation and information theory to understand software artifacts’ relationships. At Microsoft Corporation, I developed an interpretability method to comprehend neural code models. My research background is complemented by years of software engineering experience, mainly focused on back‑end applications. Currently, I’m pursuing opportunities that enable me to utilize my expertise in machine learning, artificial intelligence, and causal inference research roles, primarily concentrated on software engineering research.
+My research explores the synergies between causal inference and deep learning to automate and improve software engineering, from interpretability methods for LLMs of code to quality assurance for agent-based systems. I have published and presented at premier venues including ICSE, TOSEM, and TSE, applying techniques such as large language models, Bayesian probabilistic methods, and information theory. My recent work includes ICSE 2026 papers on human-centered explanations of LLM-generated code and causal detection of code "smells", a 1st-place finish at Microsoft's MAIDAP Hackathon, and mentoring the next generation of applied scientists through university partnerships and internal research programs. 
 
-My fields of interest lie in complexity science, neuroevolution, causal learning, and interpretable machine learning for the study and automation of software engineer.
+Before my current role, I completed my doctoral research in Computer Science at William & Mary and held research internships at Microsoft and Cisco, developing novel interpretability methods for large language models for code. My main interests are Interpretable Agentic AI, Neurosymbolic Methods, Causal AI for Software Engineering, and Quality Assurance for AI Systems. I am passionate about advancing software engineering with cutting-edge artificial intelligence and causal inference, bridging rigorous research with measurable, real-world impact.
 
 On a personal level, I was born in Bogota (Colombia). My first language is Spanish. However, I learned English and German for professional purposes. My hobbies include biking, kayaking, hiking, and (rarely) video games. I also enjoy reading sci-fi literature. My favorite author is Isaac Asimov. Because of my Colombian heritage, I am fond of coffee in all its preparation ways.
