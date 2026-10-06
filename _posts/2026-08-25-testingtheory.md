@@ -5,7 +5,7 @@ date: 2026-08-25
 description: A systematic mapping of software testing, LLM-assisted testing, and agent evaluation research from 2020 to 2026.
 tags: software-testing llm agents evaluation quality-assurance
 categories: research
-giscus_comments: true
+giscus_comments: false
 related_posts: true
 pretty_table: true
 toc:
